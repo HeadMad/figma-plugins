@@ -1,5 +1,5 @@
 <script>
-  import { figma } from '@ui/utils/figmaBridge/index.js';
+  import { figma } from '@pkg/ui/utils/figmaBridge/index.js';
 
   /** @type {string[]} */
   let images = $state([]);

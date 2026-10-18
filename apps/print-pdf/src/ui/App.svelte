@@ -5,9 +5,9 @@
     PrimaryButton,
     Toast,
     showToast,
-  } from '@ui';
-  import { figma } from '@ui/utils/figmaBridge/index.js';
-  import { safeFilename, mergeSelectionOrder } from '@utils';
+  } from '@pkg/ui';
+  import { figma } from '@pkg/ui/utils/figmaBridge/index.js';
+  import { safeFilename, mergeSelectionOrder } from '@pkg/utils';
   import { PDFDocument } from 'pdf-lib';
 
   let items = $state([]);

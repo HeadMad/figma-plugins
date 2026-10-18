@@ -1,5 +1,5 @@
 {
-  "name": "@layout-calculator",
+  "name": "@app/layout-calculator",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -10,11 +10,12 @@
     "schemas": "node ../../scripts/schema-tree.js . --md"
   },
   "dependencies": {
-    "@code": "*",
-    "@ui": "*",
-    "@utils": "*",
-    "@styles": "*",
-    "svelte": "^5.0.0"
+    "@pkg/code": "workspace:*",
+    "@pkg/ui": "workspace:*",
+    "@pkg/utils": "workspace:*",
+    "@pkg/styles": "workspace:*",
+    "svelte": "^5.0.0",
+    "svelte-super": "^2.0.0"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^5.0.0",

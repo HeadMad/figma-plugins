@@ -1,4 +1,4 @@
-import sendToUi from '@code/utils/sendToUi';
+import sendToUi from '@pkg/code/utils/sendToUi';
 import * as state from '../../state.js';
 
 /**

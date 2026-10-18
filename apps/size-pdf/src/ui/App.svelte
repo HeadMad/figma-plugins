@@ -7,7 +7,7 @@
     RadioGroup,
     SelectionList,
     PrimaryButton,
-  } from '@ui';
+  } from '@pkg/ui';
   import {
     formatNumber,
     parseInput,
@@ -16,10 +16,10 @@
     unitToPx,
     safeFilename,
     mergeSelectionOrder,
-  } from '@utils';
-  import { figma } from '@ui/utils/figmaBridge/index.js';
-  import clickOutside from '@ui/utils/clickOutside/index.js';
-  import { Toast, showToast } from '@ui';
+  } from '@pkg/utils';
+  import { figma } from '@pkg/ui/utils/figmaBridge/index.js';
+  import clickOutside from '@pkg/ui/utils/clickOutside/index.js';
+  import { Toast, showToast } from '@pkg/ui';
   import settings from './settings.svelte.js';
   import session from './session.svelte.js';
   import { PDFDocument } from 'pdf-lib';

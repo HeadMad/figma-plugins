@@ -1,4 +1,4 @@
-import hexToFigmaRgb from '@code/utils/hexToFigmaRgb';
+import hexToFigmaRgb from '@pkg/code/utils/hexToFigmaRgb';
 
 /**
  * Create a parent frame with optional card grid / component / layout grids.

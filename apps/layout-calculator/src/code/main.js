@@ -1,5 +1,5 @@
-import { createRpcRouter } from '@code';
-import * as sharedActions from '@code/actions';
+import { createRpcRouter } from '@pkg/code';
+import * as sharedActions from '@pkg/code/actions';
 import * as localActions from './actions/index.js';
 
 const actions = { ...sharedActions, ...localActions };

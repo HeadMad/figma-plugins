@@ -41,11 +41,11 @@ figma-plugins/
 
 | Пакет | Где выполняется | Что внутри |
 |-------|-----------------|------------|
-| **`@code`** | Figma sandbox (`code.js`) | RPC-actions + code-only utils |
-| **`@ui`** | Plugin iframe | Svelte components + UI utils |
-| **`@utils`** | И UI, и code | Чистые функции без DOM и без `figma.*` |
-| **`@styles`** | UI | CSS-токены и базовые стили |
-| **`@icons`** | UI | SVG-ассеты |
+| **`@pkg/code`** | Figma sandbox (`code.js`) | RPC-actions + code-only utils |
+| **`@pkg/ui`** | Plugin iframe | Svelte components + UI utils |
+| **`@pkg/utils`** | И UI, и code | Чистые функции без DOM и без `figma.*` |
+| **`@pkg/styles`** | UI | CSS-токены и базовые стили |
+| **`@pkg/icons`** | UI | SVG-ассеты |
 
 **Почему так, а не один общий js-utils:**
 
@@ -59,20 +59,20 @@ figma-plugins/
 
 ```js
 // code.js (sandbox)
-import { createRpcRouter, sendToUi } from '@code';
-import * as sharedActions from '@code/actions';
-import hexToFigmaRgb from '@code/utils/hexToFigmaRgb';
-import { formatNumber } from '@utils';
+import { createRpcRouter, sendToUi } from '@pkg/code';
+import * as sharedActions from '@pkg/code/actions';
+import hexToFigmaRgb from '@pkg/code/utils/hexToFigmaRgb';
+import { formatNumber } from '@pkg/utils';
 
 // UI (Svelte)
-import { FieldInput, Toast, showToast } from '@ui';
-import { figma } from '@ui/utils/figmaBridge';
-import clickOutside from '@ui/utils/clickOutside';
-import { parseInput, moveItem } from '@utils';
-import '@styles';
+import { FieldInput, Toast, showToast } from '@pkg/ui';
+import { figma } from '@pkg/ui/utils/figmaBridge';
+import clickOutside from '@pkg/ui/utils/clickOutside';
+import { parseInput, moveItem } from '@pkg/utils';
+import '@pkg/styles';
 ```
 
-Имена пакетов = имена директорий с префиксом `@` (`@code`, `@ui`, `@utils`) — **без** `@figma-plugins/`.
+Имена пакетов = имена директорий с префиксом `@` (`@pkg/code`, `@pkg/ui`, `@pkg/utils`) — **без** `@figma-plugins/`.
 
 ---
 
@@ -116,8 +116,8 @@ apps/my-plugin/
 `main.js` мержит общие и локальные экшены:
 
 ```js
-import { createRpcRouter, sendToUi } from '@code';
-import * as sharedActions from '@code/actions';
+import { createRpcRouter, sendToUi } from '@pkg/code';
+import * as sharedActions from '@pkg/code/actions';
 import * as localActions from './actions/index.js';
 
 const actions = { ...sharedActions, ...localActions };
@@ -135,7 +135,7 @@ createRpcRouter(actions);
 4. **Поток событий** — code пушит в UI через `sendToUi('event', data)`; UI слушает `figma.addEventListener('event', …)`.
 5. **Storage** — `figma.getClientStorage` / `getSessionStorage` / `getDocumentStorage` (Proxy).
 6. **Компоненты без лишних обёрток** — control-only (Toggle/NumberInput не оборачивают себя в `<label>`).
-7. **Стили** — component-scoped CSS в `.svelte`; общие токены в `@styles`.
+7. **Стили** — component-scoped CSS в `.svelte`; общие токены в `@pkg/styles`.
 8. **Barrel** — `index.js` контейнеров генерируется `scripts/barrel.js`.
 
 ---
@@ -143,35 +143,37 @@ createRpcRouter(actions);
 ## Команды
 
 ```bash
-npm install
+# требуется pnpm (Node >= 18)
+corepack enable
+pnpm install
 
 # сборка всех приложений
-npm run build
+pnpm build
 
 # сборка / dev одного приложения (имя папки в apps/)
-npm run build -- size-pdf
-npm run dev -- print-pdf
+pnpm build -- size-pdf
+pnpm dev -- print-pdf
 
 # дерево схем от корня → ./schema-tree.json
 # (по умолчанию только файлы со схемой; в tree.file — исходник, не *.schema.json)
 npm run schema-tree
 
 # конкретная папка
-npm run schema-tree -- --scan packages/ui/components
+pnpm schema-tree -- --scan packages/ui/components
 
 # полное дерево каталога (все файлы)
-npm run schema-tree -- --scan apps --include *
+pnpm schema-tree -- --scan apps --include *
 
 # полное дерево с исключениями
-npm run schema-tree -- --scan packages --include * --exclude node_modules schema-tree.json -empty-path -empty-file
+pnpm schema-tree -- --scan packages --include * --exclude node_modules schema-tree.json -empty-path -empty-file
 
 # только определённые маски
-npm run schema-tree -- --scan packages/ui --include *.svelte *.js --exclude index.js
+pnpm schema-tree -- --scan packages/ui --include *.svelte *.js --exclude index.js
 
 # markdown / flat / свой путь
-npm run schema-tree -- --scan packages/code --md
-npm run schema-tree -- --scan packages --include * --flat --out=docs/packages.json
-npm run schema-tree -- --scan . --just-flat --out=docs/all-flat.json
+pnpm schema-tree -- --scan packages/code --md
+pnpm schema-tree -- --scan packages --include * --flat --out=docs/packages.json
+pnpm schema-tree -- --scan . --just-flat --out=docs/all-flat.json
 ```
 
 После сборки в Figma: **Import plugin from manifest** → `apps/<name>/manifest.json` (нужен `dist/`).
@@ -189,7 +191,7 @@ npm run schema-tree -- --scan . --just-flat --out=docs/all-flat.json
 
 ## Пакеты
 
-### `@code/actions` — RPC-обработчики sandbox
+### `@pkg/code/actions` — RPC-обработчики sandbox
 
 | Entity | Описание |
 |--------|----------|
@@ -200,7 +202,7 @@ npm run schema-tree -- --scan . --just-flat --out=docs/all-flat.json
 | `setConstrainProportions` | включить/выключить lock aspect ratio |
 | `exportPdf` | export selection → page payloads (PDF/JPG) для сборки в UI |
 
-### `@code/utils` — утилиты sandbox
+### `@pkg/code/utils` — утилиты sandbox
 
 | Entity | Описание |
 |--------|----------|
@@ -216,7 +218,7 @@ npm run schema-tree -- --scan . --just-flat --out=docs/all-flat.json
 | `exportSelectionToPdf` | низкоуровневый export в байты страниц |
 | `postToUI` | упрощённый postMessage в UI |
 
-### `@ui/components` — Svelte-компоненты
+### `@pkg/ui/components` — Svelte-компоненты
 
 | Entity | Описание |
 |--------|----------|
@@ -236,7 +238,7 @@ npm run schema-tree -- --scan . --just-flat --out=docs/all-flat.json
 | `Modal` / `showModal` | модальные диалоги |
 | `Tabs` / `Tab` | вкладки на svelte-super |
 
-### `@ui/utils` — утилиты iframe
+### `@pkg/ui/utils` — утилиты iframe
 
 | Entity | Описание |
 |--------|----------|
@@ -244,7 +246,7 @@ npm run schema-tree -- --scan . --just-flat --out=docs/all-flat.json
 | `clickOutside` | Svelte 5 attachment для клика снаружи |
 | `initAutoResize` | ResizeObserver → `resize` окна плагина |
 
-### `@utils` — изоморфные хелперы
+### `@pkg/utils` — изоморфные хелперы
 
 | Entity | Описание |
 |--------|----------|
@@ -258,10 +260,10 @@ npm run schema-tree -- --scan . --just-flat --out=docs/all-flat.json
 | `moveItem` | переместить элемент массива (reorder) |
 | `mergeSelectionOrder` | слить новый selection с сохранённым порядком |
 
-### `@styles` / `@icons`
+### `@pkg/styles` / `@pkg/icons`
 
 | Пакет | Описание |
 |-------|----------|
-| `@styles` | CSS-токены Figma, reset, базовые layout-классы |
-| `@icons` | набор SVG-иконок (импорт по имени или пути) |
+| `@pkg/styles` | CSS-токены Figma, reset, базовые layout-классы |
+| `@pkg/icons` | набор SVG-иконок (импорт по имени или пути) |
 

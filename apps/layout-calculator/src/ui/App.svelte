@@ -1,7 +1,7 @@
 <script>
-  import { figma } from '@ui/utils/figmaBridge/index.js';
-  import { FieldInput, PrimaryButton, SelectField, Toast, showToast } from '@ui';
-  import { unitMultiplier } from '@utils';
+  import { figma } from '@pkg/ui/utils/figmaBridge/index.js';
+  import { FieldInput, PrimaryButton, SelectField, Toast, showToast } from '@pkg/ui';
+  import { unitMultiplier } from '@pkg/utils';
 
   let unit = $state('px');
   let ppi = $state(300);

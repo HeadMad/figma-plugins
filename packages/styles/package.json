@@ -1,7 +1,12 @@
 {
-  "name": "@styles",
+  "name": "@pkg/styles",
   "version": "0.1.0",
   "type": "module",
-  "exports": { ".": "./src/index.js" },
-  "files": ["src"]
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "files": [
+    "src"
+  ],
+  "private": true
 }

@@ -1,4 +1,4 @@
-import { figma } from '@ui/utils/figmaBridge/index.js';
+import { figma } from '@pkg/ui/utils/figmaBridge/index.js';
 
 const data = $state({
   ppi: 300,

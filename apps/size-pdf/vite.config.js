@@ -14,10 +14,10 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '@styles': path.resolve(__dirname, '../../packages/styles/src/index.js'),
-      '@ui': path.resolve(__dirname, '../../packages/ui/src'),
-      '@utils': path.resolve(__dirname, '../../packages/js-utils/src'),
-      '@code': path.resolve(__dirname, '../../packages/figma-utils/src'),
+      '@pkg/styles': path.resolve(__dirname, '../../packages/styles/src/index.js'),
+      '@pkg/ui': path.resolve(__dirname, '../../packages/ui/src'),
+      '@pkg/utils': path.resolve(__dirname, '../../packages/js-utils/src'),
+      '@pkg/code': path.resolve(__dirname, '../../packages/figma-utils/src'),
     },
   },
   build: {

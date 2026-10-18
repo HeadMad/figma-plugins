@@ -1,5 +1,5 @@
-import { sendToUi, createRpcRouter } from '@code';
-import * as sharedActions from '@code/actions';
+import { sendToUi, createRpcRouter } from '@pkg/code';
+import * as sharedActions from '@pkg/code/actions';
 
 // Merge shared actions with any plugin-local unique actions (src/code/actions)
 import * as localActions from './actions/index.js';

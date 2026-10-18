@@ -1,5 +1,5 @@
 {
-  "name": "@size-pdf",
+  "name": "@app/size-pdf",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -10,12 +10,13 @@
     "schemas": "node ../../scripts/schema-tree.js . --md"
   },
   "dependencies": {
-    "@code": "*",
-    "@ui": "*",
-    "@utils": "*",
-    "@styles": "*",
+    "@pkg/code": "workspace:*",
+    "@pkg/ui": "workspace:*",
+    "@pkg/utils": "workspace:*",
+    "@pkg/styles": "workspace:*",
     "svelte": "^5.0.0",
-    "pdf-lib": "^1.17.1"
+    "pdf-lib": "^1.17.1",
+    "svelte-super": "^2.0.0"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^5.0.0",

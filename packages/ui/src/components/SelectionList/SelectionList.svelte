@@ -1,5 +1,5 @@
 <script>
-  import moveItem from '@utils/moveItem';
+  import moveItem from '@pkg/utils/moveItem';
 
   /**
    * @typedef {{ id: string, name: string, w: number, h: number }} ListItem

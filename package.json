@@ -2,10 +2,7 @@
   "name": "figma-plugins",
   "private": true,
   "type": "module",
-  "workspaces": [
-    "packages/*",
-    "apps/*"
-  ],
+  "packageManager": "pnpm@9.15.0",
   "scripts": {
     "build": "node scripts/run-apps.js build",
     "dev": "node scripts/run-apps.js dev",
