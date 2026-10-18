@@ -1,0 +1,21 @@
+{
+  "title": "selectionMetrics",
+  "file": "selectionMetrics.js",
+  "description": "Aggregates width, height, stroke, and corner radii across a multi-selection for the plugin UI, including mixed-value flags.",
+  "type": "function",
+  "params": [
+    {
+      "name": "selection",
+      "types": [
+        "array"
+      ],
+      "description": "Readonly array of currently selected SceneNodes."
+    }
+  ],
+  "returns": {
+    "types": [
+      "object"
+    ],
+    "description": "Metrics payload: hasSelection, items[], width, height, radius, rIndividual, strokeWeight, constrainProportions. Numeric fields may be the string 'mixed'."
+  }
+}

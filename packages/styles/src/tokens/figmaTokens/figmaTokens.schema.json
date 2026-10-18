@@ -1,0 +1,83 @@
+{
+  "title": "figmaTokens",
+  "file": "figmaTokens.css",
+  "description": "Design tokens aligned with Figma themeColors and the Size PDF panel grid. Declares CSS custom properties for colors, typography, spacing, and radii under @layer tokens.",
+  "type": "css-module",
+  "variables": {
+    "--font-stack": {
+      "description": "Primary UI font stack (Inter + system fallbacks)."
+    },
+    "--font-size-default": {
+      "description": "Default body font size (11px)."
+    },
+    "--font-size-small": {
+      "description": "Secondary/small text size."
+    },
+    "--font-size-large": {
+      "description": "Section titles and modal headings."
+    },
+    "--spacing-xs": {
+      "description": "Extra-small spacing (4px)."
+    },
+    "--spacing-sm": {
+      "description": "Small spacing (8px)."
+    },
+    "--spacing-md": {
+      "description": "Medium spacing (12px)."
+    },
+    "--spacing-lg": {
+      "description": "Large spacing (16px)."
+    },
+    "--radius-small": {
+      "description": "Tight corner radius (2px)."
+    },
+    "--radius-medium": {
+      "description": "Default control radius (6px)."
+    },
+    "--radius-large": {
+      "description": "Modal/card radius (8px)."
+    },
+    "--radius-ui": {
+      "description": "Compact Figma-like control radius (3px)."
+    },
+    "--figma-color-bg-primary": {
+      "description": "Primary surface background; overridden by themeColors when available."
+    },
+    "--figma-color-bg-secondary": {
+      "description": "Secondary/field background."
+    },
+    "--figma-color-bg-brand": {
+      "description": "Brand/accent blue used for primary actions."
+    },
+    "--figma-color-text": {
+      "description": "Primary text color."
+    },
+    "--figma-color-text-tertiary": {
+      "description": "Muted/secondary text color."
+    },
+    "--figma-color-border": {
+      "description": "Default border color."
+    },
+    "--figma-color-border-selected": {
+      "description": "Focus/selected border color."
+    },
+    "--bg-main": {
+      "description": "Alias of primary background for Size PDF components."
+    },
+    "--bg-field": {
+      "description": "Alias of secondary background for input fields."
+    },
+    "--color-primary": {
+      "description": "Alias of brand color for Size PDF components."
+    },
+    "--width-field": {
+      "description": "Standard field width in the 3-column panel grid (74px)."
+    },
+    "--row-gap": {
+      "description": "Gap between columns in the panel grid (6px)."
+    },
+    "--size-icon": {
+      "description": "Icon button hit area (24px)."
+    }
+  }
+}

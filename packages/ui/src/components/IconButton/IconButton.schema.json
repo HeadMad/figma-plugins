@@ -1,0 +1,43 @@
+{
+  "title": "IconButton",
+  "file": "IconButton.svelte",
+  "description": "24×24 icon control used for settings, export, lock, and expand actions. Supports active and loading visual states.",
+  "type": "svelte-component",
+  "props": {
+    "title": {
+      "types": [
+        "string"
+      ],
+      "optional": true,
+      "description": "Native tooltip (title attribute)."
+    },
+    "active": {
+      "types": [
+        "boolean"
+      ],
+      "default": false,
+      "description": "Highlights the button (e.g. when its popover is open)."
+    },
+    "loading": {
+      "types": [
+        "boolean"
+      ],
+      "default": false,
+      "description": "Dims the button and disables pointer events during async work."
+    },
+    "onclick": {
+      "types": [
+        "function"
+      ],
+      "optional": true,
+      "description": "Click handler (e: MouseEvent) => void."
+    },
+    "children": {
+      "types": [
+        "snippet"
+      ],
+      "optional": true,
+      "description": "Icon markup (typically an inline SVG)."
+    }
+  }
+}

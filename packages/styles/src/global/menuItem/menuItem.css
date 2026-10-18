@@ -1,0 +1,30 @@
+@layer global {
+  .menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start !important;
+    width: 100%;
+    height: 24px !important;
+    padding: 0 var(--spacing-sm) !important;
+    border: none !important;
+    border-radius: var(--radius-medium) !important;
+    background: transparent !important;
+    font-family: var(--font-stack);
+    font-size: var(--font-size-default);
+    color: var(--figma-color-text) !important;
+    text-align: left !important;
+    cursor: pointer;
+    transition: background-color 0.08s ease;
+
+    &:hover {
+      background-color: var(--figma-color-bg-secondary-hover) !important;
+    }
+  }
+
+  .menu-divider {
+    width: 100%;
+    height: 1px;
+    margin: 4px 0;
+    background-color: var(--figma-color-border);
+  }
+}

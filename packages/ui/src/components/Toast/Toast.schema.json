@@ -1,0 +1,45 @@
+{
+  "title": "Toast",
+  "file": "Toast.svelte",
+  "description": "Global toast host component. Mount once near the app root. Imperative API: showToast(message, type?, duration?) exported from the module script.",
+  "type": "svelte-component",
+  "props": {},
+  "exports": {
+    "showToast": {
+      "description": "Enqueues a toast notification that auto-dismisses after duration ms.",
+      "params": [
+        {
+          "name": "message",
+          "types": [
+            "string"
+          ],
+          "description": "Text shown in the toast body."
+        },
+        {
+          "name": "type",
+          "types": [
+            "string"
+          ],
+          "optional": true,
+          "default": "info",
+          "description": "Visual variant: 'info' | 'success' | 'error'."
+        },
+        {
+          "name": "duration",
+          "types": [
+            "number"
+          ],
+          "optional": true,
+          "default": 3000,
+          "description": "Display time in milliseconds before auto-close."
+        }
+      ],
+      "returns": {
+        "types": [
+          "null"
+        ],
+        "description": "No return value."
+      }
+    }
+  }
+}

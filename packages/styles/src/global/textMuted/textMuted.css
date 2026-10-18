@@ -1,0 +1,7 @@
+@layer global {
+  .text-muted {
+    font-size: var(--font-size-small);
+    line-height: 14px;
+    color: var(--figma-color-text-tertiary);
+  }
+}

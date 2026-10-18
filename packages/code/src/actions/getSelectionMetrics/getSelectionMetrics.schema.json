@@ -1,0 +1,13 @@
+{
+  "title": "getSelectionMetrics",
+  "file": "getSelectionMetrics.js",
+  "description": "Backend RPC / stream helper: aggregates width, height, stroke, and corner radii of the current page selection for the Size PDF UI, including mixed flags and a list of items for the reorderable list.",
+  "type": "function",
+  "params": [],
+  "returns": {
+    "types": [
+      "object"
+    ],
+    "description": "{ ok, hasSelection, items[{id,name,w,h}], width, height, radius, rIndividual{tl,tr,br,bl}, strokeWeight, constrainProportions }. Numeric fields may be the string 'mixed'."
+  }
+}

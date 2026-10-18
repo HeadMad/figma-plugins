@@ -1,0 +1,48 @@
+{
+  "title": "manageStorage",
+  "file": "manageStorage.js",
+  "description": "Backend RPC action: load or save persistent plugin data via figma.clientStorage or document pluginData. Used by figmaBridge.getClientStorage / getDocumentStorage.",
+  "type": "function",
+  "params": [
+    {
+      "name": "params",
+      "types": [
+        "object"
+      ],
+      "description": "Operation descriptor object (destructured by the handler).",
+      "properties": {
+        "operation": {
+          "types": [
+            "string"
+          ],
+          "description": "'load' to read data, 'save' to write data."
+        },
+        "storageType": {
+          "types": [
+            "string"
+          ],
+          "description": "'client' for figma.clientStorage, 'document' for figma.root pluginData."
+        },
+        "storageKey": {
+          "types": [
+            "string"
+          ],
+          "description": "Unique key identifying the stored record."
+        },
+        "data": {
+          "types": [
+            "object"
+          ],
+          "optional": true,
+          "description": "Payload to persist (required for operation 'save')."
+        }
+      }
+    }
+  ],
+  "returns": {
+    "types": [
+      "Promise"
+    ],
+    "description": "For load: saved object or null. For save: { ok: true }. On unknown operation: { ok: false, error }."
+  }
+}

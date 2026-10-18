@@ -1,0 +1,6 @@
+{
+  "title": "initAutoResize",
+  "file": "initAutoResize.js",
+  "description": "ResizeObserver → figmaBridge.send('resize') to keep plugin window sized to content.",
+  "type": "function"
+}

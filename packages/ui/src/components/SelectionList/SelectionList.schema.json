@@ -1,0 +1,23 @@
+{
+  "title": "SelectionList",
+  "file": "SelectionList.svelte",
+  "description": "Scrollable list of selected frames/nodes with drag-and-drop reordering. Bound items array is rewritten on drop via moveItem.",
+  "type": "svelte-component",
+  "props": {
+    "items": {
+      "types": [
+        "array"
+      ],
+      "bindable": true,
+      "default": [],
+      "description": "List of { id, name, w, h } entries (two-way bindable; order = PDF page order)."
+    },
+    "emptyText": {
+      "types": [
+        "string"
+      ],
+      "default": "No selection",
+      "description": "Placeholder shown when the list is empty."
+    }
+  }
+}

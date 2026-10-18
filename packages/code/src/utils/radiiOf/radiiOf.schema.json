@@ -1,0 +1,21 @@
+{
+  "title": "radiiOf",
+  "file": "radiiOf.js",
+  "description": "Returns the four individual corner radii of a Figma node. Missing corners default to 0.",
+  "type": "function",
+  "params": [
+    {
+      "name": "node",
+      "types": [
+        "object"
+      ],
+      "description": "Figma SceneNode that may expose topLeftRadius, topRightRadius, bottomRightRadius, bottomLeftRadius."
+    }
+  ],
+  "returns": {
+    "types": [
+      "object"
+    ],
+    "description": "Object `{ tl, tr, br, bl }` with numeric radius values."
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "title": "applyLayout",
+  "file": "applyLayout.js",
+  "description": "Backend RPC action: applies pixel-space width, height, stroke weight, and corner radii from the UI to every node in the current selection.",
+  "type": "function",
+  "params": [
+    {
+      "name": "msg",
+      "types": [
+        "object"
+      ],
+      "description": "Layout payload already converted to pixels by the UI.",
+      "properties": {
+        "width": {
+          "types": [
+            "number",
+            "string"
+          ],
+          "optional": true,
+          "description": "Target width in px, or 'mixed' to leave unchanged."
+        },
+        "height": {
+          "types": [
+            "number",
+            "string"
+          ],
+          "optional": true,
+          "description": "Target height in px, or 'mixed' to leave unchanged."
+        },
+        "radius": {
+          "types": [
+            "number",
+            "string",
+            "null"
+          ],
+          "optional": true,
+          "description": "Uniform corner radius in px when isMainRadiusChanged is true."
+        },
+        "radiusIndividual": {
+          "types": [
+            "object"
+          ],
+          "optional": true,
+          "description": "Per-corner radii { tl, tr, br, bl }; each may be number, 'mixed', or null."
+        },
+        "strokeWeight": {
+          "types": [
+            "number",
+            "string",
+            "null"
+          ],
+          "optional": true,
+          "description": "Stroke weight in px, or 'mixed'/null to skip."
+        },
+        "constrainProportions": {
+          "types": [
+            "boolean"
+          ],
+          "optional": true,
+          "description": "When set, updates node.constrainProportions."
+        },
+        "isMainRadiusChanged": {
+          "types": [
+            "boolean"
+          ],
+          "optional": true,
+          "description": "True when the uniform radius field was edited; false when individual corners were edited."
+        }
+      }
+    }
+  ],
+  "returns": {
+    "types": [
+      "object"
+    ],
+    "description": "{ ok: true } on success, or { ok: false, error } when there is no selection."
+  }
+}

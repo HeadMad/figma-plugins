@@ -1,0 +1,30 @@
+{
+  "title": "SelectField",
+  "file": "SelectField.svelte",
+  "description": "Styled native select matching Figma panel dropdowns. Options may be strings or { value, label } objects.",
+  "type": "svelte-component",
+  "props": {
+    "value": {
+      "types": [
+        "string"
+      ],
+      "bindable": true,
+      "default": "",
+      "description": "Currently selected value (two-way bindable)."
+    },
+    "options": {
+      "types": [
+        "array"
+      ],
+      "default": [],
+      "description": "List of string labels or { value, label } option objects."
+    },
+    "onchange": {
+      "types": [
+        "function"
+      ],
+      "optional": true,
+      "description": "Callback (val: string) => void after the selection changes."
+    }
+  }
+}

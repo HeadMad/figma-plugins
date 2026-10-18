@@ -1,0 +1,20 @@
+{
+  "title": "panelLayout",
+  "file": "panelLayout.css",
+  "description": "Layout utilities for the narrow Figma-style right panel: section padding, uppercase section titles, 3-column field grid, and empty-state hint text. Registered under @layer global.",
+  "type": "css-module",
+  "selectors": {
+    ".panel-section": {
+      "description": "Horizontal padding wrapper for a panel block."
+    },
+    ".section-title": {
+      "description": "Muted uppercase section heading."
+    },
+    ".row-3col": {
+      "description": "CSS grid: field | field | icon (74px / 74px / 24px)."
+    },
+    ".hint-text": {
+      "description": "Centered muted helper text below the converter when nothing is selected."
+    }
+  }
+}

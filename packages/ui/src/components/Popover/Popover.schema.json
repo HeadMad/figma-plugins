@@ -1,0 +1,44 @@
+{
+  "title": "Popover",
+  "file": "Popover.svelte",
+  "description": "Absolutely positioned floating panel. Renders children only while open is true. Click events inside are stopped from bubbling.",
+  "type": "svelte-component",
+  "props": {
+    "open": {
+      "types": [
+        "boolean"
+      ],
+      "bindable": true,
+      "default": false,
+      "description": "Controls visibility (two-way bindable)."
+    },
+    "width": {
+      "types": [
+        "string"
+      ],
+      "default": "124px",
+      "description": "CSS width of the panel."
+    },
+    "top": {
+      "types": [
+        "string"
+      ],
+      "default": "34px",
+      "description": "CSS top offset relative to the positioning ancestor."
+    },
+    "right": {
+      "types": [
+        "string"
+      ],
+      "default": "8px",
+      "description": "CSS right offset relative to the positioning ancestor."
+    },
+    "children": {
+      "types": [
+        "snippet"
+      ],
+      "optional": true,
+      "description": "Popover body content."
+    }
+  }
+}

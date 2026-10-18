@@ -1,0 +1,21 @@
+{
+  "title": "deletePreset",
+  "file": "deletePreset.js",
+  "description": "Remove a named layout preset from clientStorage.",
+  "type": "function",
+  "params": [
+    {
+      "name": "params",
+      "types": [
+        "object"
+      ],
+      "description": "{ name }"
+    }
+  ],
+  "returns": {
+    "types": [
+      "Promise"
+    ],
+    "description": "{ ok, presets }"
+  }
+}

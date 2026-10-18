@@ -1,0 +1,18 @@
+{
+  "name": "figma-plugins",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "node scripts/run-apps.js build",
+    "dev": "node scripts/run-apps.js dev",
+    "barrel": "node scripts/barrel.js",
+    "schema-tree": "node scripts/schema-tree.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

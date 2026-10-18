@@ -1,0 +1,11 @@
+{
+  "name": "Size PDF",
+  "id": "figma-mm-resizer-pro",
+  "api": "1.0.0",
+  "main": "dist/code.js",
+  "ui": "dist/ui.html",
+  "editorType": ["figma"],
+  "networkAccess": {
+    "allowedDomains": ["none"]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "title": "formatNumber",
+  "file": "formatNumber.js",
+  "description": "Formats a numeric value with fixed decimal precision and strips trailing zeros. Accepts the sentinel string 'mixed' for multi-selection UI.",
+  "type": "function",
+  "params": [
+    {
+      "name": "num",
+      "types": [
+        "number",
+        "string",
+        "null"
+      ],
+      "description": "Value to format. Pass 'mixed' or 'Mixed' to return the Mixed label; null/NaN yields an empty string."
+    },
+    {
+      "name": "precision",
+      "types": [
+        "number"
+      ],
+      "optional": true,
+      "default": 2,
+      "description": "Number of decimal places used by toFixed before trailing zeros are removed."
+    }
+  ],
+  "returns": {
+    "types": [
+      "string"
+    ],
+    "description": "Formatted number string, 'Mixed', or empty string."
+  }
+}

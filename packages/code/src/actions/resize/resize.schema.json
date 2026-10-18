@@ -1,0 +1,37 @@
+{
+  "title": "resize",
+  "file": "resize.js",
+  "description": "Backend RPC action: resizes the plugin UI window via figma.ui.resize.",
+  "type": "function",
+  "params": [
+    {
+      "name": "params",
+      "types": [
+        "object"
+      ],
+      "description": "Size request object.",
+      "properties": {
+        "width": {
+          "types": [
+            "number"
+          ],
+          "optional": true,
+          "default": 200,
+          "description": "Window width in pixels."
+        },
+        "height": {
+          "types": [
+            "number"
+          ],
+          "description": "Window height in pixels."
+        }
+      }
+    }
+  ],
+  "returns": {
+    "types": [
+      "object"
+    ],
+    "description": "{ ok: true } after the window is resized."
+  }
+}

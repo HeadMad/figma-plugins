@@ -1,0 +1,11 @@
+{
+  "title": "icons",
+  "file": "index.js",
+  "description": "Figma-style SVG icon set from HeadMad/figma-plugin-template (105 icons). Import named exports from @figma-plugins/icons or individual files via @figma-plugins/icons/<name>.svg.",
+  "type": "asset-package",
+  "count": 105,
+  "usage": {
+    "namedImport": "import { borderRadius, check, close } from '@figma-plugins/icons';",
+    "pathImport": "import borderRadiusUrl from '@figma-plugins/icons/border-radius.svg';"
+  }
+}

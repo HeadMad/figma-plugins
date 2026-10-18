@@ -1,0 +1,21 @@
+{
+  "title": "createRpcRouter",
+  "file": "createRpcRouter.js",
+  "description": "Installs figma.ui.onmessage and routes incoming UI RPC calls to atomic action handlers. Successful results with a requestId are sent back via sendToUi.",
+  "type": "function",
+  "params": [
+    {
+      "name": "actions",
+      "types": [
+        "object"
+      ],
+      "description": "Map of action name → async/sync handler function. Handlers receive params and should return a serializable result (typically { ok, ... })."
+    }
+  ],
+  "returns": {
+    "types": [
+      "null"
+    ],
+    "description": "No return value; wires the global onmessage handler as a side effect."
+  }
+}

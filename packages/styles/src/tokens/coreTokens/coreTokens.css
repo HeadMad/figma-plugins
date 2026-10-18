@@ -1,0 +1,23 @@
+@layer tokens {
+  :root {
+    --bg-main: #ffffff;
+    --bg-field: #f5f5f5;
+    --bg-field-hover: #f0f0f0;
+    --color-text: #333333;
+    --color-muted: #b3b3b3;
+    --color-primary: #18a0fb;
+    --color-primary-light: #e1f3ff;
+    --color-icon: var(--color-muted);
+    --border-focus: #18a0fb;
+    --border-color: #e6e6e6;
+    --radius-ui: 3px;
+    --font-main: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+    --width-field: 74px;
+    --row-gap: 6px;
+    --size-icon: 24px;
+    --space-xs: 3px;
+    --space-sm: 6px;
+    --space-md: 8px;
+    --space-lg: 10px;
+  }
+}

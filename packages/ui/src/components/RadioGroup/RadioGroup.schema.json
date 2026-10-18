@@ -1,0 +1,36 @@
+{
+  "title": "RadioGroup",
+  "file": "RadioGroup.svelte",
+  "description": "Compact two-column radio group for mode switches (e.g. Vector/Flatten). Uses role=radio rows without wrapping controls in <label> (atomic UI rule).",
+  "type": "svelte-component",
+  "props": {
+    "name": {
+      "types": [
+        "string"
+      ],
+      "description": "HTML name attribute shared by the radio inputs."
+    },
+    "value": {
+      "types": [
+        "string"
+      ],
+      "bindable": true,
+      "default": "",
+      "description": "Currently selected option value (two-way bindable)."
+    },
+    "options": {
+      "types": [
+        "array"
+      ],
+      "default": [],
+      "description": "Array of { value, label } option descriptors."
+    },
+    "onchange": {
+      "types": [
+        "function"
+      ],
+      "optional": true,
+      "description": "Callback (val: string) => void when the selection changes."
+    }
+  }
+}

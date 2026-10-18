@@ -1,0 +1,21 @@
+{
+  "title": "hexToFigmaRgb",
+  "file": "hexToFigmaRgb.js",
+  "description": "Converts a CSS HEX color string into the Figma solid-paint RGB format with channels in the 0–1 range.",
+  "type": "function",
+  "params": [
+    {
+      "name": "hex",
+      "types": [
+        "string"
+      ],
+      "description": "HEX color, with or without a leading # (e.g. '#0C8CE9' or '0C8CE9')."
+    }
+  ],
+  "returns": {
+    "types": [
+      "object"
+    ],
+    "description": "Object `{ r, g, b }` with each channel in [0, 1]."
+  }
+}

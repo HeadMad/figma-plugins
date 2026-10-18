@@ -1,0 +1,37 @@
+{
+  "title": "NumberInput",
+  "file": "NumberInput.svelte",
+  "description": "Compact stepper control (− value +) for integer quantities. Control-only: no label wrapper.",
+  "type": "svelte-component",
+  "props": {
+    "value": {
+      "types": [
+        "number"
+      ],
+      "bindable": true,
+      "default": 1,
+      "description": "Current integer value (two-way bindable)."
+    },
+    "min": {
+      "types": [
+        "number"
+      ],
+      "default": 1,
+      "description": "Minimum allowed value."
+    },
+    "max": {
+      "types": [
+        "number"
+      ],
+      "default": 100,
+      "description": "Maximum allowed value."
+    },
+    "step": {
+      "types": [
+        "number"
+      ],
+      "default": 1,
+      "description": "Increment/decrement step."
+    }
+  }
+}

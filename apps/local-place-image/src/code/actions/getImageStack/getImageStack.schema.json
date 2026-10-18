@@ -1,0 +1,13 @@
+{
+  "title": "getImageStack",
+  "file": "getImageStack.js",
+  "description": "Collect IMAGE fills from chronologically ordered selection and stream base64 previews to the UI.",
+  "type": "function",
+  "params": [],
+  "returns": {
+    "types": [
+      "Promise"
+    ],
+    "description": "{ ok, count }"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Dropdown",
+  "file": "Dropdown.svelte",
+  "description": "Compact dropdown built on MenuPopover. Options are { id, label }; selected value is the option id.",
+  "type": "svelte-component",
+  "props": {
+    "options": {
+      "types": [
+        "array"
+      ],
+      "default": [],
+      "description": "Array of { id: string, label: string }."
+    },
+    "value": {
+      "types": [
+        "string"
+      ],
+      "bindable": true,
+      "description": "Selected option id (two-way bindable)."
+    }
+  }
+}

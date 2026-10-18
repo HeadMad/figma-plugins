@@ -1,0 +1,33 @@
+{
+  "title": "parseInput",
+  "file": "parseInput.js",
+  "description": "Parses a free-text UI field into a number, the 'mixed' sentinel, or null when the value is empty/invalid.",
+  "type": "function",
+  "params": [
+    {
+      "name": "val",
+      "types": [
+        "string",
+        "null"
+      ],
+      "description": "Raw input string from a form field."
+    },
+    {
+      "name": "allowNegative",
+      "types": [
+        "boolean"
+      ],
+      "optional": true,
+      "default": false,
+      "description": "When false, negative numbers are clamped to 0."
+    }
+  ],
+  "returns": {
+    "types": [
+      "number",
+      "string",
+      "null"
+    ],
+    "description": "Parsed number, 'mixed', or null."
+  }
+}

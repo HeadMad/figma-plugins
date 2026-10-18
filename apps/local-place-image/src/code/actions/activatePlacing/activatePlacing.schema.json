@@ -1,0 +1,13 @@
+{
+  "title": "activatePlacing",
+  "file": "activatePlacing.js",
+  "description": "Switch plugin into placing mode so the next selected shape receives the top image from the stack.",
+  "type": "function",
+  "params": [],
+  "returns": {
+    "types": [
+      "object"
+    ],
+    "description": "{ ok: true }"
+  }
+}

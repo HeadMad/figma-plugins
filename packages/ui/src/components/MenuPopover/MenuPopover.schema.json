@@ -1,0 +1,22 @@
+{
+  "title": "MenuPopover",
+  "file": "MenuPopover.svelte",
+  "description": "Trigger + floating menu popover (from figma-plugin-template). children = trigger; content snippet receives { close }. Closes on outside click via clickOutside attachment.",
+  "type": "svelte-component",
+  "props": {
+    "children": {
+      "types": [
+        "snippet"
+      ],
+      "optional": true,
+      "description": "Trigger element markup."
+    },
+    "content": {
+      "types": [
+        "snippet"
+      ],
+      "optional": true,
+      "description": "Menu body snippet; argument { close: () => void }."
+    }
+  }
+}

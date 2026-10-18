@@ -1,0 +1,35 @@
+{
+  "title": "pxToUnit",
+  "file": "pxToUnit.js",
+  "description": "Converts a pixel length to a physical unit at the given print resolution (PPI).",
+  "type": "function",
+  "params": [
+    {
+      "name": "px",
+      "types": [
+        "number"
+      ],
+      "description": "Length in CSS/Figma pixels."
+    },
+    {
+      "name": "ppi",
+      "types": [
+        "number"
+      ],
+      "description": "Pixels per inch used for the conversion."
+    },
+    {
+      "name": "unit",
+      "types": [
+        "string"
+      ],
+      "description": "Target physical unit: 'mm', 'cm', or 'in'."
+    }
+  ],
+  "returns": {
+    "types": [
+      "number"
+    ],
+    "description": "Length in the requested physical unit."
+  }
+}

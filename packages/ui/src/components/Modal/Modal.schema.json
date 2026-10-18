@@ -1,0 +1,37 @@
+{
+  "title": "Modal",
+  "file": "Modal.svelte",
+  "description": "Global modal host. Mount once near the app root. Imperative API: showModal(config) / closeModal() exported from the module script.",
+  "type": "svelte-component",
+  "props": {},
+  "exports": {
+    "showModal": {
+      "description": "Opens a modal with the given configuration.",
+      "params": [
+        {
+          "name": "config",
+          "types": [
+            "object"
+          ],
+          "description": "Modal config: title (string), description? (string), snippet? (Snippet), component? (Component), componentProps? (object), buttons (array of { label, variant?, onClick(close) })."
+        }
+      ],
+      "returns": {
+        "types": [
+          "null"
+        ],
+        "description": "No return value."
+      }
+    },
+    "closeModal": {
+      "description": "Closes the currently open modal.",
+      "params": [],
+      "returns": {
+        "types": [
+          "null"
+        ],
+        "description": "No return value."
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "title": "safeFilename",
+  "file": "safeFilename.js",
+  "description": "Sanitizes a string for use as a download filename by replacing forbidden path characters.",
+  "type": "function",
+  "params": [
+    {
+      "name": "name",
+      "types": [
+        "string"
+      ],
+      "optional": true,
+      "description": "Proposed filename (without path)."
+    },
+    {
+      "name": "fallback",
+      "types": [
+        "string"
+      ],
+      "optional": true,
+      "default": "export",
+      "description": "Value used when name is empty after sanitization."
+    }
+  ],
+  "returns": {
+    "types": [
+      "string"
+    ],
+    "description": "Safe filename segment."
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "title": "unitMultiplier",
+  "file": "unitMultiplier.js",
+  "description": "Returns how many physical units fit in one inch. Used for PPI ↔ mm/cm/in conversions.",
+  "type": "function",
+  "params": [
+    {
+      "name": "unit",
+      "types": [
+        "string"
+      ],
+      "description": "Physical unit code: 'mm' (default), 'cm', or 'in'."
+    }
+  ],
+  "returns": {
+    "types": [
+      "number"
+    ],
+    "description": "Multiplier relative to inches (25.4 for mm, 2.54 for cm, 1 for in)."
+  }
+}

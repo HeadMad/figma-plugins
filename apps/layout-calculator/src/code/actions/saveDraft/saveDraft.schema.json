@@ -1,0 +1,21 @@
+{
+  "title": "saveDraft",
+  "file": "saveDraft.js",
+  "description": "Save layout calculator form draft to figma.clientStorage.",
+  "type": "function",
+  "params": [
+    {
+      "name": "params",
+      "types": [
+        "object"
+      ],
+      "description": "{ data }"
+    }
+  ],
+  "returns": {
+    "types": [
+      "Promise"
+    ],
+    "description": "{ ok: true }"
+  }
+}

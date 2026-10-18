@@ -1,0 +1,17 @@
+{
+  "title": "normalizer",
+  "file": "normalizer.css",
+  "description": "Minimal browser reset for the plugin iframe: border-box, zeroed margins, full-size body, system font inheritance for form controls. Registered under @layer reset.",
+  "type": "css-module",
+  "selectors": {
+    "*": {
+      "description": "Universal box-sizing and margin/padding reset."
+    },
+    "html, body": {
+      "description": "Full viewport canvas with hidden overflow and base typography."
+    },
+    "button, input, select": {
+      "description": "Inherit font family, size, and color from body."
+    }
+  }
+}

@@ -1,0 +1,84 @@
+@layer global {
+  .form-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+
+    & label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: 28px;
+      cursor: pointer;
+      user-select: none;
+      font-size: var(--font-size-default);
+      color: var(--figma-color-text);
+
+      &.form-panel__vertical {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 4px;
+        height: auto;
+        cursor: default;
+      }
+
+      & > span {
+        color: var(--figma-color-text);
+        font-size: var(--font-size-default);
+      }
+
+      &:not(.form-panel__vertical) > input[type="text"],
+      &:not(.form-panel__vertical) > input[type="number"] {
+        width: 70px;
+        text-align: right;
+      }
+    }
+
+    & input[type="text"],
+    & input[type="number"] {
+      width: 100%;
+      height: 28px;
+      padding: 0 var(--spacing-sm);
+      border: 1px solid var(--figma-color-border);
+      border-radius: var(--radius-medium);
+      background-color: var(--figma-color-bg-secondary);
+      font-family: var(--font-stack);
+      font-size: var(--font-size-default);
+      color: var(--figma-color-text);
+      outline: none;
+      transition: border-color 0.1s ease, background-color 0.1s ease;
+
+      &:focus {
+        border-color: var(--figma-color-border-selected);
+        background-color: var(--figma-color-bg-primary);
+      }
+    }
+
+    & input[type="color"] {
+      width: 28px;
+      height: 20px;
+      padding: 0;
+      border: none;
+      border-radius: var(--radius-small);
+      background: transparent;
+      cursor: pointer;
+      -webkit-appearance: none;
+
+      &::-webkit-color-swatch-wrapper { padding: 0; }
+      &::-webkit-color-swatch {
+        border: 1px solid var(--figma-color-border);
+        border-radius: var(--radius-small);
+      }
+    }
+
+    & .form-divider {
+      width: 100%;
+      margin: 4px 0;
+      border: none;
+      border-top: 1px solid var(--figma-color-border);
+    }
+  }
+}

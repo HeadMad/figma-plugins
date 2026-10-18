@@ -1,0 +1,21 @@
+{
+  "title": "canExport",
+  "file": "canExport.js",
+  "description": "Checks whether a node supports the Figma exportAsync API and can therefore be exported to PNG/JPG/PDF.",
+  "type": "function",
+  "params": [
+    {
+      "name": "node",
+      "types": [
+        "object"
+      ],
+      "description": "Candidate Figma SceneNode."
+    }
+  ],
+  "returns": {
+    "types": [
+      "boolean"
+    ],
+    "description": "True when node.exportAsync is a function."
+  }
+}

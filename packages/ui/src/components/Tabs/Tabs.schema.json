@@ -1,0 +1,37 @@
+{
+  "title": "Tabs",
+  "file": "Tabs.svelte",
+  "description": "Tab bar + panel router built on svelte-super. Use with the exported Tab (SuperContent) children: each Tab needs an id and optional opened flag. The children snippet of Tabs receives { select, open, close, toggle, isActive, controls }.",
+  "type": "svelte-component",
+  "props": {
+    "children": {
+      "types": [
+        "snippet"
+      ],
+      "optional": true,
+      "description": "Snippet that receives tab control helpers and should render Tab panels."
+    }
+  },
+  "exports": {
+    "Tab": {
+      "description": "Panel primitive (svelte-super SuperContent). Props: id (string, tab label/key), opened (boolean, initially active).",
+      "params": [
+        {
+          "name": "id",
+          "types": [
+            "string"
+          ],
+          "description": "Tab identifier shown in the tab bar."
+        },
+        {
+          "name": "opened",
+          "types": [
+            "boolean"
+          ],
+          "optional": true,
+          "description": "When true, this tab is selected on first render."
+        }
+      ]
+    }
+  }
+}

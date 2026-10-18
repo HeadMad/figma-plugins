@@ -1,0 +1,21 @@
+{
+  "title": "strokeOf",
+  "file": "strokeOf.js",
+  "description": "Reads the stroke weight of a Figma node. Returns 0 when the node has no strokes or does not support strokes.",
+  "type": "function",
+  "params": [
+    {
+      "name": "node",
+      "types": [
+        "object"
+      ],
+      "description": "Figma SceneNode (or any object with optional strokes/strokeWeight)."
+    }
+  ],
+  "returns": {
+    "types": [
+      "number"
+    ],
+    "description": "Stroke weight in pixels, or 0."
+  }
+}

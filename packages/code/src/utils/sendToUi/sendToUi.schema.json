@@ -1,0 +1,38 @@
+{
+  "title": "sendToUi",
+  "file": "sendToUi.js",
+  "description": "Posts a structured RPC/stream message from the Figma sandbox to the plugin UI iframe (action + params + optional requestId).",
+  "type": "function",
+  "params": [
+    {
+      "name": "action",
+      "types": [
+        "string"
+      ],
+      "description": "Event or action name consumed by the UI bridge (e.g. 'selectionchange', 'pdf-progress')."
+    },
+    {
+      "name": "params",
+      "types": [
+        "object"
+      ],
+      "optional": true,
+      "default": {},
+      "description": "Payload associated with the action."
+    },
+    {
+      "name": "requestId",
+      "types": [
+        "string"
+      ],
+      "optional": true,
+      "description": "When set, the UI treats the message as a response to a pending figma.send Promise."
+    }
+  ],
+  "returns": {
+    "types": [
+      "null"
+    ],
+    "description": "No return value."
+  }
+}

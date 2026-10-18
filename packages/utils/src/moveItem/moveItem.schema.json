@@ -1,0 +1,35 @@
+{
+  "title": "moveItem",
+  "file": "moveItem.js",
+  "description": "Returns a new array with the element at index `from` moved to index `to`. Does not mutate the original array.",
+  "type": "function",
+  "params": [
+    {
+      "name": "arr",
+      "types": [
+        "array"
+      ],
+      "description": "Source array (left unchanged)."
+    },
+    {
+      "name": "from",
+      "types": [
+        "number"
+      ],
+      "description": "Index of the item to move."
+    },
+    {
+      "name": "to",
+      "types": [
+        "number"
+      ],
+      "description": "Destination index."
+    }
+  ],
+  "returns": {
+    "types": [
+      "array"
+    ],
+    "description": "New array with the item reordered, or a shallow copy if indices are invalid."
+  }
+}

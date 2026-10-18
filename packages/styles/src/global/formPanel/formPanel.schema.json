@@ -1,0 +1,26 @@
+{
+  "title": "formPanel",
+  "file": "formPanel.css",
+  "description": "Universal form layout from the Figma plugin template: vertical stack of label+control rows, text/number inputs, color pickers, and dividers. Registered under @layer global.",
+  "type": "css-module",
+  "selectors": {
+    ".form-panel": {
+      "description": "Root flex column for form rows."
+    },
+    ".form-panel label": {
+      "description": "Horizontal row: caption left, control right."
+    },
+    ".form-panel label.form-panel__vertical": {
+      "description": "Vertical variant: caption above full-width control."
+    },
+    ".form-panel input[type=text|number]": {
+      "description": "Styled text/number fields with focus border."
+    },
+    ".form-panel input[type=color]": {
+      "description": "Compact native color swatch."
+    },
+    ".form-panel .form-divider": {
+      "description": "Thin horizontal separator between form blocks."
+    }
+  }
+}

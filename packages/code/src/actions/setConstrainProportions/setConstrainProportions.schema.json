@@ -1,0 +1,29 @@
+{
+  "title": "setConstrainProportions",
+  "file": "setConstrainProportions.js",
+  "description": "Backend RPC action: sets constrainProportions on every selected node (lock aspect ratio toggle).",
+  "type": "function",
+  "params": [
+    {
+      "name": "params",
+      "types": [
+        "object"
+      ],
+      "description": "Toggle payload.",
+      "properties": {
+        "constrainProportions": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Desired lock state."
+        }
+      }
+    }
+  ],
+  "returns": {
+    "types": [
+      "object"
+    ],
+    "description": "{ ok: true } after updating the selection."
+  }
+}

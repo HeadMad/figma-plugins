@@ -1,0 +1,13 @@
+{
+  "title": "deleteCard",
+  "file": "deleteCard.js",
+  "description": "Remove the top image from the placement stack.",
+  "type": "function",
+  "params": [],
+  "returns": {
+    "types": [
+      "Promise"
+    ],
+    "description": "{ ok: true }"
+  }
+}

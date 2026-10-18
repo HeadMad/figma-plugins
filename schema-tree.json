@@ -1,0 +1,2580 @@
+{
+  "generatedAt": "2026-10-18T04:39:07.418Z",
+  "root": ".",
+  "scan": ".",
+  "include": [
+    "(schema-backed sources)"
+  ],
+  "exclude": [
+    "-empty-file",
+    "-empty-path"
+  ],
+  "count": 61,
+  "tree": {
+    "name": "MONOREPO",
+    "children": [
+      {
+        "name": "apps",
+        "children": [
+          {
+            "name": "layout-calculator",
+            "children": [
+              {
+                "name": "src",
+                "children": [
+                  {
+                    "name": "code",
+                    "children": [
+                      {
+                        "name": "actions",
+                        "children": [
+                          {
+                            "name": "createLayout",
+                            "children": [
+                              {
+                                "file": "createLayout.js",
+                                "title": "createLayout",
+                                "description": "Build a layout frame with optional card component grid and Figma layout grids from calculator parameters.",
+                                "type": "function",
+                                "schema": {
+                                  "title": "createLayout",
+                                  "file": "createLayout.js",
+                                  "description": "Build a layout frame with optional card component grid and Figma layout grids from calculator parameters.",
+                                  "type": "function",
+                                  "params": [
+                                    {
+                                      "name": "params",
+                                      "types": [
+                                        "object"
+                                      ],
+                                      "description": "{ data: layout fields, names: { frameStr, cardStr } }"
+                                    }
+                                  ],
+                                  "returns": {
+                                    "types": [
+                                      "object"
+                                    ],
+                                    "description": "{ ok: true }"
+                                  }
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "name": "deletePreset",
+                            "children": [
+                              {
+                                "file": "deletePreset.js",
+                                "title": "deletePreset",
+                                "description": "Remove a named layout preset from clientStorage.",
+                                "type": "function",
+                                "schema": {
+                                  "title": "deletePreset",
+                                  "file": "deletePreset.js",
+                                  "description": "Remove a named layout preset from clientStorage.",
+                                  "type": "function",
+                                  "params": [
+                                    {
+                                      "name": "params",
+                                      "types": [
+                                        "object"
+                                      ],
+                                      "description": "{ name }"
+                                    }
+                                  ],
+                                  "returns": {
+                                    "types": [
+                                      "Promise"
+                                    ],
+                                    "description": "{ ok, presets }"
+                                  }
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "name": "loadDraft",
+                            "children": [
+                              {
+                                "file": "loadDraft.js",
+                                "title": "loadDraft",
+                                "description": "Load calculator draft and custom presets from clientStorage.",
+                                "type": "function",
+                                "schema": {
+                                  "title": "loadDraft",
+                                  "file": "loadDraft.js",
+                                  "description": "Load calculator draft and custom presets from clientStorage.",
+                                  "type": "function",
+                                  "params": [],
+                                  "returns": {
+                                    "types": [
+                                      "Promise"
+                                    ],
+                                    "description": "{ ok, data, presets }"
+                                  }
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "name": "saveDraft",
+                            "children": [
+                              {
+                                "file": "saveDraft.js",
+                                "title": "saveDraft",
+                                "description": "Save layout calculator form draft to figma.clientStorage.",
+                                "type": "function",
+                                "schema": {
+                                  "title": "saveDraft",
+                                  "file": "saveDraft.js",
+                                  "description": "Save layout calculator form draft to figma.clientStorage.",
+                                  "type": "function",
+                                  "params": [
+                                    {
+                                      "name": "params",
+                                      "types": [
+                                        "object"
+                                      ],
+                                      "description": "{ data }"
+                                    }
+                                  ],
+                                  "returns": {
+                                    "types": [
+                                      "Promise"
+                                    ],
+                                    "description": "{ ok: true }"
+                                  }
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "name": "savePreset",
+                            "children": [
+                              {
+                                "file": "savePreset.js",
+                                "title": "savePreset",
+                                "description": "Store a named layout preset in clientStorage.",
+                                "type": "function",
+                                "schema": {
+                                  "title": "savePreset",
+                                  "file": "savePreset.js",
+                                  "description": "Store a named layout preset in clientStorage.",
+                                  "type": "function",
+                                  "params": [
+                                    {
+                                      "name": "params",
+                                      "types": [
+                                        "object"
+                                      ],
+                                      "description": "{ name, stateData }"
+                                    }
+                                  ],
+                                  "returns": {
+                                    "types": [
+                                      "Promise"
+                                    ],
+                                    "description": "{ ok, presets }"
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "local-place-image",
+            "children": [
+              {
+                "name": "src",
+                "children": [
+                  {
+                    "name": "code",
+                    "children": [
+                      {
+                        "name": "actions",
+                        "children": [
+                          {
+                            "name": "activatePlacing",
+                            "children": [
+                              {
+                                "file": "activatePlacing.js",
+                                "title": "activatePlacing",
+                                "description": "Switch plugin into placing mode so the next selected shape receives the top image from the stack.",
+                                "type": "function",
+                                "schema": {
+                                  "title": "activatePlacing",
+                                  "file": "activatePlacing.js",
+                                  "description": "Switch plugin into placing mode so the next selected shape receives the top image from the stack.",
+                                  "type": "function",
+                                  "params": [],
+                                  "returns": {
+                                    "types": [
+                                      "object"
+                                    ],
+                                    "description": "{ ok: true }"
+                                  }
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "name": "cycleCard",
+                            "children": [
+                              {
+                                "file": "cycleCard.js",
+                                "title": "cycleCard",
+                                "description": "Rotate the image stack: top card moves to the bottom.",
+                                "type": "function",
+                                "schema": {
+                                  "title": "cycleCard",
+                                  "file": "cycleCard.js",
+                                  "description": "Rotate the image stack: top card moves to the bottom.",
+                                  "type": "function",
+                                  "params": [],
+                                  "returns": {
+                                    "types": [
+                                      "Promise"
+                                    ],
+                                    "description": "{ ok: true }"
+                                  }
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "name": "deleteCard",
+                            "children": [
+                              {
+                                "file": "deleteCard.js",
+                                "title": "deleteCard",
+                                "description": "Remove the top image from the placement stack.",
+                                "type": "function",
+                                "schema": {
+                                  "title": "deleteCard",
+                                  "file": "deleteCard.js",
+                                  "description": "Remove the top image from the placement stack.",
+                                  "type": "function",
+                                  "params": [],
+                                  "returns": {
+                                    "types": [
+                                      "Promise"
+                                    ],
+                                    "description": "{ ok: true }"
+                                  }
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "name": "getImageStack",
+                            "children": [
+                              {
+                                "file": "getImageStack.js",
+                                "title": "getImageStack",
+                                "description": "Collect IMAGE fills from chronologically ordered selection and stream base64 previews to the UI.",
+                                "type": "function",
+                                "schema": {
+                                  "title": "getImageStack",
+                                  "file": "getImageStack.js",
+                                  "description": "Collect IMAGE fills from chronologically ordered selection and stream base64 previews to the UI.",
+                                  "type": "function",
+                                  "params": [],
+                                  "returns": {
+                                    "types": [
+                                      "Promise"
+                                    ],
+                                    "description": "{ ok, count }"
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "print-pdf",
+            "children": [
+              {
+                "name": "src",
+                "children": [
+                  {
+                    "name": "code",
+                    "children": [
+                      {
+                        "name": "actions",
+                        "children": [
+                          {
+                            "name": "printExport",
+                            "children": [
+                              {
+                                "file": "printExport.js",
+                                "title": "printExport",
+                                "description": "Export selection to PDF or flattened JPG with optional font-to-outlines via temporary clones.",
+                                "type": "function",
+                                "schema": {
+                                  "title": "printExport",
+                                  "file": "printExport.js",
+                                  "description": "Export selection to PDF or flattened JPG with optional font-to-outlines via temporary clones.",
+                                  "type": "function",
+                                  "params": [
+                                    {
+                                      "name": "msg",
+                                      "types": [
+                                        "object"
+                                      ],
+                                      "description": "{ mode: 'flatten'|'vector', merge, outline, order: string[] }"
+                                    }
+                                  ],
+                                  "returns": {
+                                    "types": [
+                                      "Promise"
+                                    ],
+                                    "description": "{ ok, pages, merge, pageName } or { ok: false, error }"
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "packages",
+        "children": [
+          {
+            "name": "code",
+            "children": [
+              {
+                "name": "src",
+                "children": [
+                  {
+                    "name": "actions",
+                    "children": [
+                      {
+                        "name": "applyLayout",
+                        "children": [
+                          {
+                            "file": "applyLayout.js",
+                            "title": "applyLayout",
+                            "description": "Backend RPC action: applies pixel-space width, height, stroke weight, and corner radii from the UI to every node in the current selection.",
+                            "type": "function",
+                            "schema": {
+                              "title": "applyLayout",
+                              "file": "applyLayout.js",
+                              "description": "Backend RPC action: applies pixel-space width, height, stroke weight, and corner radii from the UI to every node in the current selection.",
+                              "type": "function",
+                              "params": [
+                                {
+                                  "name": "msg",
+                                  "types": [
+                                    "object"
+                                  ],
+                                  "description": "Layout payload already converted to pixels by the UI.",
+                                  "properties": {
+                                    "width": {
+                                      "types": [
+                                        "number",
+                                        "string"
+                                      ],
+                                      "optional": true,
+                                      "description": "Target width in px, or 'mixed' to leave unchanged."
+                                    },
+                                    "height": {
+                                      "types": [
+                                        "number",
+                                        "string"
+                                      ],
+                                      "optional": true,
+                                      "description": "Target height in px, or 'mixed' to leave unchanged."
+                                    },
+                                    "radius": {
+                                      "types": [
+                                        "number",
+                                        "string",
+                                        "null"
+                                      ],
+                                      "optional": true,
+                                      "description": "Uniform corner radius in px when isMainRadiusChanged is true."
+                                    },
+                                    "radiusIndividual": {
+                                      "types": [
+                                        "object"
+                                      ],
+                                      "optional": true,
+                                      "description": "Per-corner radii { tl, tr, br, bl }; each may be number, 'mixed', or null."
+                                    },
+                                    "strokeWeight": {
+                                      "types": [
+                                        "number",
+                                        "string",
+                                        "null"
+                                      ],
+                                      "optional": true,
+                                      "description": "Stroke weight in px, or 'mixed'/null to skip."
+                                    },
+                                    "constrainProportions": {
+                                      "types": [
+                                        "boolean"
+                                      ],
+                                      "optional": true,
+                                      "description": "When set, updates node.constrainProportions."
+                                    },
+                                    "isMainRadiusChanged": {
+                                      "types": [
+                                        "boolean"
+                                      ],
+                                      "optional": true,
+                                      "description": "True when the uniform radius field was edited; false when individual corners were edited."
+                                    }
+                                  }
+                                }
+                              ],
+                              "returns": {
+                                "types": [
+                                  "object"
+                                ],
+                                "description": "{ ok: true } on success, or { ok: false, error } when there is no selection."
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "name": "exportPdf",
+                        "children": [
+                          {
+                            "file": "exportPdf.js",
+                            "title": "exportPdf",
+                            "description": "Backend RPC action: exports the ordered selection as vector PDF or flattened JPG pages. Streams pdf-progress events to the UI and returns page payloads for client-side PDF assembly (pdf-lib).",
+                            "type": "function",
+                            "schema": {
+                              "title": "exportPdf",
+                              "file": "exportPdf.js",
+                              "description": "Backend RPC action: exports the ordered selection as vector PDF or flattened JPG pages. Streams pdf-progress events to the UI and returns page payloads for client-side PDF assembly (pdf-lib).",
+                              "type": "function",
+                              "params": [
+                                {
+                                  "name": "msg",
+                                  "types": [
+                                    "object"
+                                  ],
+                                  "description": "Export options.",
+                                  "properties": {
+                                    "mode": {
+                                      "types": [
+                                        "string"
+                                      ],
+                                      "optional": true,
+                                      "default": "vector",
+                                      "description": "'vector' exports PDF bytes; 'flatten' exports JPG at scale 1."
+                                    },
+                                    "merge": {
+                                      "types": [
+                                        "boolean"
+                                      ],
+                                      "optional": true,
+                                      "default": true,
+                                      "description": "Hint for the UI: true = single multi-page PDF, false = one file per frame."
+                                    },
+                                    "order": {
+                                      "types": [
+                                        "array"
+                                      ],
+                                      "optional": true,
+                                      "description": "Node ids in the desired page order (from the drag-and-drop SelectionList)."
+                                    }
+                                  }
+                                }
+                              ],
+                              "returns": {
+                                "types": [
+                                  "Promise"
+                                ],
+                                "description": "Resolves to { ok: true, pages[{name,bytes,isImage,format,width,height}], merge, pageName } or { ok: false, error }."
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "name": "getSelectionMetrics",
+                        "children": [
+                          {
+                            "file": "getSelectionMetrics.js",
+                            "title": "getSelectionMetrics",
+                            "description": "Backend RPC / stream helper: aggregates width, height, stroke, and corner radii of the current page selection for the Size PDF UI, including mixed flags and a list of items for the reorderable list.",
+                            "type": "function",
+                            "schema": {
+                              "title": "getSelectionMetrics",
+                              "file": "getSelectionMetrics.js",
+                              "description": "Backend RPC / stream helper: aggregates width, height, stroke, and corner radii of the current page selection for the Size PDF UI, including mixed flags and a list of items for the reorderable list.",
+                              "type": "function",
+                              "params": [],
+                              "returns": {
+                                "types": [
+                                  "object"
+                                ],
+                                "description": "{ ok, hasSelection, items[{id,name,w,h}], width, height, radius, rIndividual{tl,tr,br,bl}, strokeWeight, constrainProportions }. Numeric fields may be the string 'mixed'."
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "name": "manageStorage",
+                        "children": [
+                          {
+                            "file": "manageStorage.js",
+                            "title": "manageStorage",
+                            "description": "Backend RPC action: load or save persistent plugin data via figma.clientStorage or document pluginData. Used by figmaBridge.getClientStorage / getDocumentStorage.",
+                            "type": "function",
+                            "schema": {
+                              "title": "manageStorage",
+                              "file": "manageStorage.js",
+                              "description": "Backend RPC action: load or save persistent plugin data via figma.clientStorage or document pluginData. Used by figmaBridge.getClientStorage / getDocumentStorage.",
+                              "type": "function",
+                              "params": [
+                                {
+                                  "name": "params",
+                                  "types": [
+                                    "object"
+                                  ],
+                                  "description": "Operation descriptor object (destructured by the handler).",
+                                  "properties": {
+                                    "operation": {
+                                      "types": [
+                                        "string"
+                                      ],
+                                      "description": "'load' to read data, 'save' to write data."
+                                    },
+                                    "storageType": {
+                                      "types": [
+                                        "string"
+                                      ],
+                                      "description": "'client' for figma.clientStorage, 'document' for figma.root pluginData."
+                                    },
+                                    "storageKey": {
+                                      "types": [
+                                        "string"
+                                      ],
+                                      "description": "Unique key identifying the stored record."
+                                    },
+                                    "data": {
+                                      "types": [
+                                        "object"
+                                      ],
+                                      "optional": true,
+                                      "description": "Payload to persist (required for operation 'save')."
+                                    }
+                                  }
+                                }
+                              ],
+                              "returns": {
+                                "types": [
+                                  "Promise"
+                                ],
+                                "description": "For load: saved object or null. For save: { ok: true }. On unknown operation: { ok: false, error }."
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "name": "resize",
+                        "children": [
+                          {
+                            "file": "resize.js",
+                            "title": "resize",
+                            "description": "Backend RPC action: resizes the plugin UI window via figma.ui.resize.",
+                            "type": "function",
+                            "schema": {
+                              "title": "resize",
+                              "file": "resize.js",
+                              "description": "Backend RPC action: resizes the plugin UI window via figma.ui.resize.",
+                              "type": "function",
+                              "params": [
+                                {
+                                  "name": "params",
+                                  "types": [
+                                    "object"
+                                  ],
+                                  "description": "Size request object.",
+                                  "properties": {
+                                    "width": {
+                                      "types": [
+                                        "number"
+                                      ],
+                                      "optional": true,
+                                      "default": 200,
+                                      "description": "Window width in pixels."
+                                    },
+                                    "height": {
+                                      "types": [
+                                        "number"
+                                      ],
+                                      "description": "Window height in pixels."
+                                    }
+                                  }
+                                }
+                              ],
+                              "returns": {
+                                "types": [
+                                  "object"
+                                ],
+                                "description": "{ ok: true } after the window is resized."
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "name": "setConstrainProportions",
+                        "children": [
+                          {
+                            "file": "setConstrainProportions.js",
+                            "title": "setConstrainProportions",
+                            "description": "Backend RPC action: sets constrainProportions on every selected node (lock aspect ratio toggle).",
+                            "type": "function",
+                            "schema": {
+                              "title": "setConstrainProportions",
+                              "file": "setConstrainProportions.js",
+                              "description": "Backend RPC action: sets constrainProportions on every selected node (lock aspect ratio toggle).",
+                              "type": "function",
+                              "params": [
+                                {
+                                  "name": "params",
+                                  "types": [
+                                    "object"
+                                  ],
+                                  "description": "Toggle payload.",
+                                  "properties": {
+                                    "constrainProportions": {
+                                      "types": [
+                                        "boolean"
+                                      ],
+                                      "description": "Desired lock state."
+                                    }
+                                  }
+                                }
+                              ],
+                              "returns": {
+                                "types": [
+                                  "object"
+                                ],
+                                "description": "{ ok: true } after updating the selection."
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "utils",
+                    "children": [
+                      {
+                        "name": "applyLayoutChanges",
+                        "children": [
+                          {
+                            "file": "applyLayoutChanges.js",
+                            "title": "applyLayoutChanges",
+                            "description": "Applies width, height, stroke weight, and corner radius changes from a UI message to every node in the current Figma selection.",
+                            "type": "function",
+                            "schema": {
+                              "title": "applyLayoutChanges",
+                              "file": "applyLayoutChanges.js",
+                              "description": "Applies width, height, stroke weight, and corner radius changes from a UI message to every node in the current Figma selection.",
+                              "type": "function",
+                              "params": [
+                                {
+                                  "name": "msg",
+                                  "types": [
+                                    "object"
+                                  ],
+                                  "description": "Layout payload: width, height, radius, radiusIndividual {tl,tr,br,bl}, strokeWeight, constrainProportions, isMainRadiusChanged. Values may be numbers or 'mixed'."
+                                }
+                              ],
+                              "returns": {
+                                "types": [
+                                  "null"
+                                ],
+                                "description": "No return value; mutates selected nodes in place."
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "name": "canExport",
+                        "children": [
+                          {
+                            "file": "canExport.js",
+                            "title": "canExport",
+                            "description": "Checks whether a node supports the Figma exportAsync API and can therefore be exported to PNG/JPG/PDF.",
+                            "type": "function",
+                            "schema": {
+                              "title": "canExport",
+                              "file": "canExport.js",
+                              "description": "Checks whether a node supports the Figma exportAsync API and can therefore be exported to PNG/JPG/PDF.",
+                              "type": "function",
+                              "params": [
+                                {
+                                  "name": "node",
+                                  "types": [
+                                    "object"
+                                  ],
+                                  "description": "Candidate Figma SceneNode."
+                                }
+                              ],
+                              "returns": {
+                                "types": [
+                                  "boolean"
+                                ],
+                                "description": "True when node.exportAsync is a function."
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "name": "createRpcRouter",
+                        "children": [
+                          {
+                            "file": "createRpcRouter.js",
+                            "title": "createRpcRouter",
+                            "description": "Installs figma.ui.onmessage and routes incoming UI RPC calls to atomic action handlers. Successful results with a requestId are sent back via sendToUi.",
+                            "type": "function",
+                            "schema": {
+                              "title": "createRpcRouter",
+                              "file": "createRpcRouter.js",
+                              "description": "Installs figma.ui.onmessage and routes incoming UI RPC calls to atomic action handlers. Successful results with a requestId are sent back via sendToUi.",
+                              "type": "function",
+                              "params": [
+                                {
+                                  "name": "actions",
+                                  "types": [
+                                    "object"
+                                  ],
+                                  "description": "Map of action name → async/sync handler function. Handlers receive params and should return a serializable result (typically { ok, ... })."
+                                }
+                              ],
+                              "returns": {
+                                "types": [
+                                  "null"
+                                ],
+                                "description": "No return value; wires the global onmessage handler as a side effect."
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "name": "exportSelectionToPdf",
+                        "children": [
+                          {
+                            "file": "exportSelectionToPdf.js",
+                            "title": "exportSelectionToPdf",
+                            "description": "Exports the ordered selection to PDF or flattened JPG page payloads and posts progress/result messages to the UI via the provided post callback.",
+                            "type": "function",
+                            "schema": {
+                              "title": "exportSelectionToPdf",
+                              "file": "exportSelectionToPdf.js",
+                              "description": "Exports the ordered selection to PDF or flattened JPG page payloads and posts progress/result messages to the UI via the provided post callback.",
+                              "type": "function",
+                              "params": [
+                                {
+                                  "name": "msg",
+                                  "types": [
+                                    "object"
+                                  ],
+                                  "description": "Export options: mode ('vector'|'flatten'), merge (boolean), order (string[] of node ids)."
+                                },
+                                {
+                                  "name": "post",
+                                  "types": [
+                                    "function"
+                                  ],
+                                  "description": "Callback used to send progress and result messages to the UI (e.g. sendToUi or figma.ui.postMessage wrapper)."
+                                }
+                              ],
+                              "returns": {
+                                "types": [
+                                  "Promise"
+                                ],
+                                "description": "Resolves when all pages are exported and the final message is posted. Does not return page data directly."
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "name": "hexToFigmaRgb",
+                        "children": [
+                          {
+                            "file": "hexToFigmaRgb.js",
+                            "title": "hexToFigmaRgb",
+                            "description": "Converts a CSS HEX color string into the Figma solid-paint RGB format with channels in the 0–1 range.",
+                            "type": "function",
+                            "schema": {
+                              "title": "hexToFigmaRgb",
+                              "file": "hexToFigmaRgb.js",
+                              "description": "Converts a CSS HEX color string into the Figma solid-paint RGB format with channels in the 0–1 range.",
+                              "type": "function",
+                              "params": [
+                                {
+                                  "name": "hex",
+                                  "types": [
+                                    "string"
+                                  ],
+                                  "description": "HEX color, with or without a leading # (e.g. '#0C8CE9' or '0C8CE9')."
+                                }
+                              ],
+                              "returns": {
+                                "types": [
+                                  "object"
+                                ],
+                                "description": "Object `{ r, g, b }` with each channel in [0, 1]."
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "name": "orderedSelection",
+                        "children": [
+                          {
+                            "file": "orderedSelection.js",
+                            "title": "orderedSelection",
+                            "description": "Filters the current selection to exportable nodes and optionally reorders them by a list of node ids (for multi-page PDF order).",
+                            "type": "function",
+                            "schema": {
+                              "title": "orderedSelection",
+                              "file": "orderedSelection.js",
+                              "description": "Filters the current selection to exportable nodes and optionally reorders them by a list of node ids (for multi-page PDF order).",
+                              "type": "function",
+                              "params": [
+                                {
+                                  "name": "selection",
+                                  "types": [
+                                    "array"
+                                  ],
+                                  "description": "Readonly array of SceneNode from figma.currentPage.selection."
+                                },
+                                {
+                                  "name": "orderIds",
+                                  "types": [
+                                    "array"
+                                  ],
+                                  "optional": true,
+                                  "description": "Preferred order of node ids. When empty or missing, selection order is kept."
+                                }
+                              ],
+                              "returns": {
+                                "types": [
+                                  "array"
+                                ],
+                                "description": "Ordered array of exportable SceneNodes."
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "name": "radiiOf",
+                        "children": [
+                          {
+                            "file": "radiiOf.js",
+                            "title": "radiiOf",
+                            "description": "Returns the four individual corner radii of a Figma node. Missing corners default to 0.",
+                            "type": "function",
+                            "schema": {
+                              "title": "radiiOf",
+                              "file": "radiiOf.js",
+                              "description": "Returns the four individual corner radii of a Figma node. Missing corners default to 0.",
+                              "type": "function",
+                              "params": [
+                                {
+                                  "name": "node",
+                                  "types": [
+                                    "object"
+                                  ],
+                                  "description": "Figma SceneNode that may expose topLeftRadius, topRightRadius, bottomRightRadius, bottomLeftRadius."
+                                }
+                              ],
+                              "returns": {
+                                "types": [
+                                  "object"
+                                ],
+                                "description": "Object `{ tl, tr, br, bl }` with numeric radius values."
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "name": "selectionMetrics",
+                        "children": [
+                          {
+                            "file": "selectionMetrics.js",
+                            "title": "selectionMetrics",
+                            "description": "Aggregates width, height, stroke, and corner radii across a multi-selection for the plugin UI, including mixed-value flags.",
+                            "type": "function",
+                            "schema": {
+                              "title": "selectionMetrics",
+                              "file": "selectionMetrics.js",
+                              "description": "Aggregates width, height, stroke, and corner radii across a multi-selection for the plugin UI, including mixed-value flags.",
+                              "type": "function",
+                              "params": [
+                                {
+                                  "name": "selection",
+                                  "types": [
+                                    "array"
+                                  ],
+                                  "description": "Readonly array of currently selected SceneNodes."
+                                }
+                              ],
+                              "returns": {
+                                "types": [
+                                  "object"
+                                ],
+                                "description": "Metrics payload: hasSelection, items[], width, height, radius, rIndividual, strokeWeight, constrainProportions. Numeric fields may be the string 'mixed'."
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "name": "sendToUi",
+                        "children": [
+                          {
+                            "file": "sendToUi.js",
+                            "title": "sendToUi",
+                            "description": "Posts a structured RPC/stream message from the Figma sandbox to the plugin UI iframe (action + params + optional requestId).",
+                            "type": "function",
+                            "schema": {
+                              "title": "sendToUi",
+                              "file": "sendToUi.js",
+                              "description": "Posts a structured RPC/stream message from the Figma sandbox to the plugin UI iframe (action + params + optional requestId).",
+                              "type": "function",
+                              "params": [
+                                {
+                                  "name": "action",
+                                  "types": [
+                                    "string"
+                                  ],
+                                  "description": "Event or action name consumed by the UI bridge (e.g. 'selectionchange', 'pdf-progress')."
+                                },
+                                {
+                                  "name": "params",
+                                  "types": [
+                                    "object"
+                                  ],
+                                  "optional": true,
+                                  "default": {},
+                                  "description": "Payload associated with the action."
+                                },
+                                {
+                                  "name": "requestId",
+                                  "types": [
+                                    "string"
+                                  ],
+                                  "optional": true,
+                                  "description": "When set, the UI treats the message as a response to a pending figma.send Promise."
+                                }
+                              ],
+                              "returns": {
+                                "types": [
+                                  "null"
+                                ],
+                                "description": "No return value."
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "name": "strokeOf",
+                        "children": [
+                          {
+                            "file": "strokeOf.js",
+                            "title": "strokeOf",
+                            "description": "Reads the stroke weight of a Figma node. Returns 0 when the node has no strokes or does not support strokes.",
+                            "type": "function",
+                            "schema": {
+                              "title": "strokeOf",
+                              "file": "strokeOf.js",
+                              "description": "Reads the stroke weight of a Figma node. Returns 0 when the node has no strokes or does not support strokes.",
+                              "type": "function",
+                              "params": [
+                                {
+                                  "name": "node",
+                                  "types": [
+                                    "object"
+                                  ],
+                                  "description": "Figma SceneNode (or any object with optional strokes/strokeWeight)."
+                                }
+                              ],
+                              "returns": {
+                                "types": [
+                                  "number"
+                                ],
+                                "description": "Stroke weight in pixels, or 0."
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "icons",
+            "children": [
+              {
+                "name": "src",
+                "children": [
+                  {
+                    "file": "index.js",
+                    "title": "icons",
+                    "description": "Figma-style SVG icon set from HeadMad/figma-plugin-template (105 icons). Import named exports from @figma-plugins/icons or individual files via @figma-plugins/icons/<name>.svg.",
+                    "type": "asset-package",
+                    "schema": {
+                      "title": "icons",
+                      "file": "index.js",
+                      "description": "Figma-style SVG icon set from HeadMad/figma-plugin-template (105 icons). Import named exports from @figma-plugins/icons or individual files via @figma-plugins/icons/<name>.svg.",
+                      "type": "asset-package",
+                      "count": 105,
+                      "usage": {
+                        "namedImport": "import { borderRadius, check, close } from '@figma-plugins/icons';",
+                        "pathImport": "import borderRadiusUrl from '@figma-plugins/icons/border-radius.svg';"
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "styles",
+            "children": [
+              {
+                "name": "src",
+                "children": [
+                  {
+                    "name": "global",
+                    "children": [
+                      {
+                        "name": "formPanel",
+                        "children": [
+                          {
+                            "file": "formPanel.css",
+                            "title": "formPanel",
+                            "description": "Universal form layout from the Figma plugin template: vertical stack of label+control rows, text/number inputs, color pickers, and dividers. Registered under @layer global.",
+                            "type": "css-module",
+                            "schema": {
+                              "title": "formPanel",
+                              "file": "formPanel.css",
+                              "description": "Universal form layout from the Figma plugin template: vertical stack of label+control rows, text/number inputs, color pickers, and dividers. Registered under @layer global.",
+                              "type": "css-module",
+                              "selectors": {
+                                ".form-panel": {
+                                  "description": "Root flex column for form rows."
+                                },
+                                ".form-panel label": {
+                                  "description": "Horizontal row: caption left, control right."
+                                },
+                                ".form-panel label.form-panel__vertical": {
+                                  "description": "Vertical variant: caption above full-width control."
+                                },
+                                ".form-panel input[type=text|number]": {
+                                  "description": "Styled text/number fields with focus border."
+                                },
+                                ".form-panel input[type=color]": {
+                                  "description": "Compact native color swatch."
+                                },
+                                ".form-panel .form-divider": {
+                                  "description": "Thin horizontal separator between form blocks."
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "name": "menuItem",
+                        "children": [
+                          {
+                            "file": "menuItem.css",
+                            "title": "menuItem",
+                            "description": "Styles for popover/dropdown menu rows and separators used inside IconButton popovers. Registered under @layer global.",
+                            "type": "css-module",
+                            "schema": {
+                              "title": "menuItem",
+                              "file": "menuItem.css",
+                              "description": "Styles for popover/dropdown menu rows and separators used inside IconButton popovers. Registered under @layer global.",
+                              "type": "css-module",
+                              "selectors": {
+                                ".menu-item": {
+                                  "description": "Full-width clickable menu row with hover background."
+                                },
+                                ".menu-divider": {
+                                  "description": "1px horizontal rule between menu groups."
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "name": "panelLayout",
+                        "children": [
+                          {
+                            "file": "panelLayout.css",
+                            "title": "panelLayout",
+                            "description": "Layout utilities for the narrow Figma-style right panel: section padding, uppercase section titles, 3-column field grid, and empty-state hint text. Registered under @layer global.",
+                            "type": "css-module",
+                            "schema": {
+                              "title": "panelLayout",
+                              "file": "panelLayout.css",
+                              "description": "Layout utilities for the narrow Figma-style right panel: section padding, uppercase section titles, 3-column field grid, and empty-state hint text. Registered under @layer global.",
+                              "type": "css-module",
+                              "selectors": {
+                                ".panel-section": {
+                                  "description": "Horizontal padding wrapper for a panel block."
+                                },
+                                ".section-title": {
+                                  "description": "Muted uppercase section heading."
+                                },
+                                ".row-3col": {
+                                  "description": "CSS grid: field | field | icon (74px / 74px / 24px)."
+                                },
+                                ".hint-text": {
+                                  "description": "Centered muted helper text below the converter when nothing is selected."
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "name": "textMuted",
+                        "children": [
+                          {
+                            "file": "textMuted.css",
+                            "title": "textMuted",
+                            "description": "Utility class for secondary/helper copy (smaller size, tertiary text color).",
+                            "type": "css-module",
+                            "schema": {
+                              "title": "textMuted",
+                              "file": "textMuted.css",
+                              "description": "Utility class for secondary/helper copy (smaller size, tertiary text color).",
+                              "type": "css-module",
+                              "selectors": {
+                                ".text-muted": {
+                                  "description": "Muted body text for descriptions and empty states."
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "resets",
+                    "children": [
+                      {
+                        "name": "normalizer",
+                        "children": [
+                          {
+                            "file": "normalizer.css",
+                            "title": "normalizer",
+                            "description": "Minimal browser reset for the plugin iframe: border-box, zeroed margins, full-size body, system font inheritance for form controls. Registered under @layer reset.",
+                            "type": "css-module",
+                            "schema": {
+                              "title": "normalizer",
+                              "file": "normalizer.css",
+                              "description": "Minimal browser reset for the plugin iframe: border-box, zeroed margins, full-size body, system font inheritance for form controls. Registered under @layer reset.",
+                              "type": "css-module",
+                              "selectors": {
+                                "*": {
+                                  "description": "Universal box-sizing and margin/padding reset."
+                                },
+                                "html, body": {
+                                  "description": "Full viewport canvas with hidden overflow and base typography."
+                                },
+                                "button, input, select": {
+                                  "description": "Inherit font family, size, and color from body."
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "tokens",
+                    "children": [
+                      {
+                        "name": "coreTokens",
+                        "children": [
+                          {
+                            "file": "coreTokens.css",
+                            "title": "coreTokens",
+                            "description": "Legacy/compat design tokens for the Size PDF panel (colors, field width, icon size). Prefer figmaTokens for new work; both layers share the same CSS variable names where overlapping.",
+                            "type": "css-module",
+                            "schema": {
+                              "title": "coreTokens",
+                              "file": "coreTokens.css",
+                              "description": "Legacy/compat design tokens for the Size PDF panel (colors, field width, icon size). Prefer figmaTokens for new work; both layers share the same CSS variable names where overlapping.",
+                              "type": "css-module",
+                              "variables": {
+                                "--bg-main": {
+                                  "description": "Main panel background."
+                                },
+                                "--bg-field": {
+                                  "description": "Input field background."
+                                },
+                                "--bg-field-hover": {
+                                  "description": "Input field hover background."
+                                },
+                                "--color-text": {
+                                  "description": "Primary text color."
+                                },
+                                "--color-muted": {
+                                  "description": "Muted label/icon color."
+                                },
+                                "--color-primary": {
+                                  "description": "Accent/primary action color."
+                                },
+                                "--color-primary-light": {
+                                  "description": "Light accent fill for active icon buttons."
+                                },
+                                "--border-focus": {
+                                  "description": "Focus ring border color."
+                                },
+                                "--border-color": {
+                                  "description": "Default control border."
+                                },
+                                "--radius-ui": {
+                                  "description": "Control corner radius."
+                                },
+                                "--font-main": {
+                                  "description": "UI font family."
+                                },
+                                "--width-field": {
+                                  "description": "Standard field column width."
+                                },
+                                "--row-gap": {
+                                  "description": "Grid column gap."
+                                },
+                                "--size-icon": {
+                                  "description": "Icon button size."
+                                },
+                                "--space-xs": {
+                                  "description": "3px spacing step."
+                                },
+                                "--space-sm": {
+                                  "description": "6px spacing step."
+                                },
+                                "--space-md": {
+                                  "description": "8px spacing step."
+                                },
+                                "--space-lg": {
+                                  "description": "10px spacing step."
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "name": "figmaTokens",
+                        "children": [
+                          {
+                            "file": "figmaTokens.css",
+                            "title": "figmaTokens",
+                            "description": "Design tokens aligned with Figma themeColors and the Size PDF panel grid. Declares CSS custom properties for colors, typography, spacing, and radii under @layer tokens.",
+                            "type": "css-module",
+                            "schema": {
+                              "title": "figmaTokens",
+                              "file": "figmaTokens.css",
+                              "description": "Design tokens aligned with Figma themeColors and the Size PDF panel grid. Declares CSS custom properties for colors, typography, spacing, and radii under @layer tokens.",
+                              "type": "css-module",
+                              "variables": {
+                                "--font-stack": {
+                                  "description": "Primary UI font stack (Inter + system fallbacks)."
+                                },
+                                "--font-size-default": {
+                                  "description": "Default body font size (11px)."
+                                },
+                                "--font-size-small": {
+                                  "description": "Secondary/small text size."
+                                },
+                                "--font-size-large": {
+                                  "description": "Section titles and modal headings."
+                                },
+                                "--spacing-xs": {
+                                  "description": "Extra-small spacing (4px)."
+                                },
+                                "--spacing-sm": {
+                                  "description": "Small spacing (8px)."
+                                },
+                                "--spacing-md": {
+                                  "description": "Medium spacing (12px)."
+                                },
+                                "--spacing-lg": {
+                                  "description": "Large spacing (16px)."
+                                },
+                                "--radius-small": {
+                                  "description": "Tight corner radius (2px)."
+                                },
+                                "--radius-medium": {
+                                  "description": "Default control radius (6px)."
+                                },
+                                "--radius-large": {
+                                  "description": "Modal/card radius (8px)."
+                                },
+                                "--radius-ui": {
+                                  "description": "Compact Figma-like control radius (3px)."
+                                },
+                                "--figma-color-bg-primary": {
+                                  "description": "Primary surface background; overridden by themeColors when available."
+                                },
+                                "--figma-color-bg-secondary": {
+                                  "description": "Secondary/field background."
+                                },
+                                "--figma-color-bg-brand": {
+                                  "description": "Brand/accent blue used for primary actions."
+                                },
+                                "--figma-color-text": {
+                                  "description": "Primary text color."
+                                },
+                                "--figma-color-text-tertiary": {
+                                  "description": "Muted/secondary text color."
+                                },
+                                "--figma-color-border": {
+                                  "description": "Default border color."
+                                },
+                                "--figma-color-border-selected": {
+                                  "description": "Focus/selected border color."
+                                },
+                                "--bg-main": {
+                                  "description": "Alias of primary background for Size PDF components."
+                                },
+                                "--bg-field": {
+                                  "description": "Alias of secondary background for input fields."
+                                },
+                                "--color-primary": {
+                                  "description": "Alias of brand color for Size PDF components."
+                                },
+                                "--width-field": {
+                                  "description": "Standard field width in the 3-column panel grid (74px)."
+                                },
+                                "--row-gap": {
+                                  "description": "Gap between columns in the panel grid (6px)."
+                                },
+                                "--size-icon": {
+                                  "description": "Icon button hit area (24px)."
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "ui",
+            "children": [
+              {
+                "name": "src",
+                "children": [
+                  {
+                    "name": "components",
+                    "children": [
+                      {
+                        "name": "Dropdown",
+                        "children": [
+                          {
+                            "file": "Dropdown.svelte",
+                            "title": "Dropdown",
+                            "description": "Compact dropdown built on MenuPopover. Options are { id, label }; selected value is the option id.",
+                            "type": "svelte-component",
+                            "schema": {
+                              "title": "Dropdown",
+                              "file": "Dropdown.svelte",
+                              "description": "Compact dropdown built on MenuPopover. Options are { id, label }; selected value is the option id.",
+                              "type": "svelte-component",
+                              "props": {
+                                "options": {
+                                  "types": [
+                                    "array"
+                                  ],
+                                  "default": [],
+                                  "description": "Array of { id: string, label: string }."
+                                },
+                                "value": {
+                                  "types": [
+                                    "string"
+                                  ],
+                                  "bindable": true,
+                                  "description": "Selected option id (two-way bindable)."
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "name": "FieldInput",
+                        "children": [
+                          {
+                            "file": "FieldInput.svelte",
+                            "title": "FieldInput",
+                            "description": "Text field with optional scrubbable prefix, matching Figma property panel inputs. Supports $bindable value and oninput/onscrub callbacks.",
+                            "type": "svelte-component",
+                            "schema": {
+                              "title": "FieldInput",
+                              "file": "FieldInput.svelte",
+                              "description": "Text field with optional scrubbable prefix, matching Figma property panel inputs. Supports $bindable value and oninput/onscrub callbacks.",
+                              "type": "svelte-component",
+                              "props": {
+                                "value": {
+                                  "types": [
+                                    "string"
+                                  ],
+                                  "bindable": true,
+                                  "default": "",
+                                  "description": "Current field text (two-way bindable)."
+                                },
+                                "placeholder": {
+                                  "types": [
+                                    "string"
+                                  ],
+                                  "optional": true,
+                                  "description": "Native input placeholder."
+                                },
+                                "prefix": {
+                                  "types": [
+                                    "string"
+                                  ],
+                                  "optional": true,
+                                  "description": "Label shown in the left prefix area (e.g. W, H, R, PPI)."
+                                },
+                                "step": {
+                                  "types": [
+                                    "number"
+                                  ],
+                                  "default": 1,
+                                  "description": "Scrub step passed to ScrubHandle."
+                                },
+                                "min": {
+                                  "types": [
+                                    "number"
+                                  ],
+                                  "default": 0,
+                                  "description": "Minimum value for scrubbing."
+                                },
+                                "scrub": {
+                                  "types": [
+                                    "boolean"
+                                  ],
+                                  "default": true,
+                                  "description": "When true and prefix is set, the prefix acts as a ScrubHandle."
+                                },
+                                "padLeft": {
+                                  "types": [
+                                    "string",
+                                    "null"
+                                  ],
+                                  "optional": true,
+                                  "description": "Override for input padding-left (e.g. '28px' for longer prefixes)."
+                                },
+                                "oninput": {
+                                  "types": [
+                                    "function"
+                                  ],
+                                  "optional": true,
+                                  "description": "Callback (val: string) => void after the value changes via typing or scrubbing."
+                                },
+                                "onscrub": {
+                                  "types": [
+                                    "function"
+                                  ],
+                                  "optional": true,
+                                  "description": "Callback (val: number) => void when the value changes via scrub only."
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "name": "IconButton",
+                        "children": [
+                          {
+                            "file": "IconButton.svelte",
+                            "title": "IconButton",
+                            "description": "24×24 icon control used for settings, export, lock, and expand actions. Supports active and loading visual states.",
+                            "type": "svelte-component",
+                            "schema": {
+                              "title": "IconButton",
+                              "file": "IconButton.svelte",
+                              "description": "24×24 icon control used for settings, export, lock, and expand actions. Supports active and loading visual states.",
+                              "type": "svelte-component",
+                              "props": {
+                                "title": {
+                                  "types": [
+                                    "string"
+                                  ],
+                                  "optional": true,
+                                  "description": "Native tooltip (title attribute)."
+                                },
+                                "active": {
+                                  "types": [
+                                    "boolean"
+                                  ],
+                                  "default": false,
+                                  "description": "Highlights the button (e.g. when its popover is open)."
+                                },
+                                "loading": {
+                                  "types": [
+                                    "boolean"
+                                  ],
+                                  "default": false,
+                                  "description": "Dims the button and disables pointer events during async work."
+                                },
+                                "onclick": {
+                                  "types": [
+                                    "function"
+                                  ],
+                                  "optional": true,
+                                  "description": "Click handler (e: MouseEvent) => void."
+                                },
+                                "children": {
+                                  "types": [
+                                    "snippet"
+                                  ],
+                                  "optional": true,
+                                  "description": "Icon markup (typically an inline SVG)."
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "name": "MenuPopover",
+                        "children": [
+                          {
+                            "file": "MenuPopover.svelte",
+                            "title": "MenuPopover",
+                            "description": "Trigger + floating menu popover (from figma-plugin-template). children = trigger; content snippet receives { close }. Closes on outside click via clickOutside attachment.",
+                            "type": "svelte-component",
+                            "schema": {
+                              "title": "MenuPopover",
+                              "file": "MenuPopover.svelte",
+                              "description": "Trigger + floating menu popover (from figma-plugin-template). children = trigger; content snippet receives { close }. Closes on outside click via clickOutside attachment.",
+                              "type": "svelte-component",
+                              "props": {
+                                "children": {
+                                  "types": [
+                                    "snippet"
+                                  ],
+                                  "optional": true,
+                                  "description": "Trigger element markup."
+                                },
+                                "content": {
+                                  "types": [
+                                    "snippet"
+                                  ],
+                                  "optional": true,
+                                  "description": "Menu body snippet; argument { close: () => void }."
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Modal",
+                        "children": [
+                          {
+                            "file": "Modal.svelte",
+                            "title": "Modal",
+                            "description": "Global modal host. Mount once near the app root. Imperative API: showModal(config) / closeModal() exported from the module script.",
+                            "type": "svelte-component",
+                            "schema": {
+                              "title": "Modal",
+                              "file": "Modal.svelte",
+                              "description": "Global modal host. Mount once near the app root. Imperative API: showModal(config) / closeModal() exported from the module script.",
+                              "type": "svelte-component",
+                              "props": {},
+                              "exports": {
+                                "showModal": {
+                                  "description": "Opens a modal with the given configuration.",
+                                  "params": [
+                                    {
+                                      "name": "config",
+                                      "types": [
+                                        "object"
+                                      ],
+                                      "description": "Modal config: title (string), description? (string), snippet? (Snippet), component? (Component), componentProps? (object), buttons (array of { label, variant?, onClick(close) })."
+                                    }
+                                  ],
+                                  "returns": {
+                                    "types": [
+                                      "null"
+                                    ],
+                                    "description": "No return value."
+                                  }
+                                },
+                                "closeModal": {
+                                  "description": "Closes the currently open modal.",
+                                  "params": [],
+                                  "returns": {
+                                    "types": [
+                                      "null"
+                                    ],
+                                    "description": "No return value."
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "name": "NumberInput",
+                        "children": [
+                          {
+                            "file": "NumberInput.svelte",
+                            "title": "NumberInput",
+                            "description": "Compact stepper control (− value +) for integer quantities. Control-only: no label wrapper.",
+                            "type": "svelte-component",
+                            "schema": {
+                              "title": "NumberInput",
+                              "file": "NumberInput.svelte",
+                              "description": "Compact stepper control (− value +) for integer quantities. Control-only: no label wrapper.",
+                              "type": "svelte-component",
+                              "props": {
+                                "value": {
+                                  "types": [
+                                    "number"
+                                  ],
+                                  "bindable": true,
+                                  "default": 1,
+                                  "description": "Current integer value (two-way bindable)."
+                                },
+                                "min": {
+                                  "types": [
+                                    "number"
+                                  ],
+                                  "default": 1,
+                                  "description": "Minimum allowed value."
+                                },
+                                "max": {
+                                  "types": [
+                                    "number"
+                                  ],
+                                  "default": 100,
+                                  "description": "Maximum allowed value."
+                                },
+                                "step": {
+                                  "types": [
+                                    "number"
+                                  ],
+                                  "default": 1,
+                                  "description": "Increment/decrement step."
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Popover",
+                        "children": [
+                          {
+                            "file": "Popover.svelte",
+                            "title": "Popover",
+                            "description": "Absolutely positioned floating panel. Renders children only while open is true. Click events inside are stopped from bubbling.",
+                            "type": "svelte-component",
+                            "schema": {
+                              "title": "Popover",
+                              "file": "Popover.svelte",
+                              "description": "Absolutely positioned floating panel. Renders children only while open is true. Click events inside are stopped from bubbling.",
+                              "type": "svelte-component",
+                              "props": {
+                                "open": {
+                                  "types": [
+                                    "boolean"
+                                  ],
+                                  "bindable": true,
+                                  "default": false,
+                                  "description": "Controls visibility (two-way bindable)."
+                                },
+                                "width": {
+                                  "types": [
+                                    "string"
+                                  ],
+                                  "default": "124px",
+                                  "description": "CSS width of the panel."
+                                },
+                                "top": {
+                                  "types": [
+                                    "string"
+                                  ],
+                                  "default": "34px",
+                                  "description": "CSS top offset relative to the positioning ancestor."
+                                },
+                                "right": {
+                                  "types": [
+                                    "string"
+                                  ],
+                                  "default": "8px",
+                                  "description": "CSS right offset relative to the positioning ancestor."
+                                },
+                                "children": {
+                                  "types": [
+                                    "snippet"
+                                  ],
+                                  "optional": true,
+                                  "description": "Popover body content."
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "name": "PrimaryButton",
+                        "children": [
+                          {
+                            "file": "PrimaryButton.svelte",
+                            "title": "PrimaryButton",
+                            "description": "Full-width primary action button (brand blue) used for confirm/export actions inside popovers.",
+                            "type": "svelte-component",
+                            "schema": {
+                              "title": "PrimaryButton",
+                              "file": "PrimaryButton.svelte",
+                              "description": "Full-width primary action button (brand blue) used for confirm/export actions inside popovers.",
+                              "type": "svelte-component",
+                              "props": {
+                                "disabled": {
+                                  "types": [
+                                    "boolean"
+                                  ],
+                                  "default": false,
+                                  "description": "Disables the button and reduces opacity."
+                                },
+                                "onclick": {
+                                  "types": [
+                                    "function"
+                                  ],
+                                  "optional": true,
+                                  "description": "Click handler (e: MouseEvent) => void."
+                                },
+                                "children": {
+                                  "types": [
+                                    "snippet"
+                                  ],
+                                  "optional": true,
+                                  "description": "Button label content."
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "name": "RadioGroup",
+                        "children": [
+                          {
+                            "file": "RadioGroup.svelte",
+                            "title": "RadioGroup",
+                            "description": "Compact two-column radio group for mode switches (e.g. Vector/Flatten). Uses role=radio rows without wrapping controls in <label> (atomic UI rule).",
+                            "type": "svelte-component",
+                            "schema": {
+                              "title": "RadioGroup",
+                              "file": "RadioGroup.svelte",
+                              "description": "Compact two-column radio group for mode switches (e.g. Vector/Flatten). Uses role=radio rows without wrapping controls in <label> (atomic UI rule).",
+                              "type": "svelte-component",
+                              "props": {
+                                "name": {
+                                  "types": [
+                                    "string"
+                                  ],
+                                  "description": "HTML name attribute shared by the radio inputs."
+                                },
+                                "value": {
+                                  "types": [
+                                    "string"
+                                  ],
+                                  "bindable": true,
+                                  "default": "",
+                                  "description": "Currently selected option value (two-way bindable)."
+                                },
+                                "options": {
+                                  "types": [
+                                    "array"
+                                  ],
+                                  "default": [],
+                                  "description": "Array of { value, label } option descriptors."
+                                },
+                                "onchange": {
+                                  "types": [
+                                    "function"
+                                  ],
+                                  "optional": true,
+                                  "description": "Callback (val: string) => void when the selection changes."
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "name": "ScrubHandle",
+                        "children": [
+                          {
+                            "file": "ScrubHandle.svelte",
+                            "title": "ScrubHandle",
+                            "description": "Horizontal drag handle for scrubbing a numeric value. Typically placed inside a field prefix (W, H, R). Emits onscrub while the pointer moves.",
+                            "type": "svelte-component",
+                            "schema": {
+                              "title": "ScrubHandle",
+                              "file": "ScrubHandle.svelte",
+                              "description": "Horizontal drag handle for scrubbing a numeric value. Typically placed inside a field prefix (W, H, R). Emits onscrub while the pointer moves.",
+                              "type": "svelte-component",
+                              "props": {
+                                "value": {
+                                  "types": [
+                                    "number",
+                                    "string"
+                                  ],
+                                  "default": 0,
+                                  "description": "Current numeric value used as the scrub starting point."
+                                },
+                                "step": {
+                                  "types": [
+                                    "number"
+                                  ],
+                                  "default": 1,
+                                  "description": "Multiplier applied to horizontal pixel delta (pixels × step)."
+                                },
+                                "min": {
+                                  "types": [
+                                    "number"
+                                  ],
+                                  "optional": true,
+                                  "description": "Lower clamp for the scrubbed value."
+                                },
+                                "disabled": {
+                                  "types": [
+                                    "boolean"
+                                  ],
+                                  "default": false,
+                                  "description": "When true, pointer interactions are ignored."
+                                },
+                                "onscrub": {
+                                  "types": [
+                                    "function"
+                                  ],
+                                  "optional": true,
+                                  "description": "Callback (next: number) => void invoked on each pointer move during a drag."
+                                },
+                                "children": {
+                                  "types": [
+                                    "snippet"
+                                  ],
+                                  "optional": true,
+                                  "description": "Snippet rendered inside the handle (usually a short prefix label)."
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "name": "SelectField",
+                        "children": [
+                          {
+                            "file": "SelectField.svelte",
+                            "title": "SelectField",
+                            "description": "Styled native select matching Figma panel dropdowns. Options may be strings or { value, label } objects.",
+                            "type": "svelte-component",
+                            "schema": {
+                              "title": "SelectField",
+                              "file": "SelectField.svelte",
+                              "description": "Styled native select matching Figma panel dropdowns. Options may be strings or { value, label } objects.",
+                              "type": "svelte-component",
+                              "props": {
+                                "value": {
+                                  "types": [
+                                    "string"
+                                  ],
+                                  "bindable": true,
+                                  "default": "",
+                                  "description": "Currently selected value (two-way bindable)."
+                                },
+                                "options": {
+                                  "types": [
+                                    "array"
+                                  ],
+                                  "default": [],
+                                  "description": "List of string labels or { value, label } option objects."
+                                },
+                                "onchange": {
+                                  "types": [
+                                    "function"
+                                  ],
+                                  "optional": true,
+                                  "description": "Callback (val: string) => void after the selection changes."
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "name": "SelectionList",
+                        "children": [
+                          {
+                            "file": "SelectionList.svelte",
+                            "title": "SelectionList",
+                            "description": "Scrollable list of selected frames/nodes with drag-and-drop reordering. Bound items array is rewritten on drop via moveItem.",
+                            "type": "svelte-component",
+                            "schema": {
+                              "title": "SelectionList",
+                              "file": "SelectionList.svelte",
+                              "description": "Scrollable list of selected frames/nodes with drag-and-drop reordering. Bound items array is rewritten on drop via moveItem.",
+                              "type": "svelte-component",
+                              "props": {
+                                "items": {
+                                  "types": [
+                                    "array"
+                                  ],
+                                  "bindable": true,
+                                  "default": [],
+                                  "description": "List of { id, name, w, h } entries (two-way bindable; order = PDF page order)."
+                                },
+                                "emptyText": {
+                                  "types": [
+                                    "string"
+                                  ],
+                                  "default": "No selection",
+                                  "description": "Placeholder shown when the list is empty."
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Tabs",
+                        "children": [
+                          {
+                            "file": "Tabs.svelte",
+                            "title": "Tabs",
+                            "description": "Tab bar + panel router built on svelte-super. Use with the exported Tab (SuperContent) children: each Tab needs an id and optional opened flag. The children snippet of Tabs receives { select, open, close, toggle, isActive, controls }.",
+                            "type": "svelte-component",
+                            "schema": {
+                              "title": "Tabs",
+                              "file": "Tabs.svelte",
+                              "description": "Tab bar + panel router built on svelte-super. Use with the exported Tab (SuperContent) children: each Tab needs an id and optional opened flag. The children snippet of Tabs receives { select, open, close, toggle, isActive, controls }.",
+                              "type": "svelte-component",
+                              "props": {
+                                "children": {
+                                  "types": [
+                                    "snippet"
+                                  ],
+                                  "optional": true,
+                                  "description": "Snippet that receives tab control helpers and should render Tab panels."
+                                }
+                              },
+                              "exports": {
+                                "Tab": {
+                                  "description": "Panel primitive (svelte-super SuperContent). Props: id (string, tab label/key), opened (boolean, initially active).",
+                                  "params": [
+                                    {
+                                      "name": "id",
+                                      "types": [
+                                        "string"
+                                      ],
+                                      "description": "Tab identifier shown in the tab bar."
+                                    },
+                                    {
+                                      "name": "opened",
+                                      "types": [
+                                        "boolean"
+                                      ],
+                                      "optional": true,
+                                      "description": "When true, this tab is selected on first render."
+                                    }
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Toast",
+                        "children": [
+                          {
+                            "file": "Toast.svelte",
+                            "title": "Toast",
+                            "description": "Global toast host component. Mount once near the app root. Imperative API: showToast(message, type?, duration?) exported from the module script.",
+                            "type": "svelte-component",
+                            "schema": {
+                              "title": "Toast",
+                              "file": "Toast.svelte",
+                              "description": "Global toast host component. Mount once near the app root. Imperative API: showToast(message, type?, duration?) exported from the module script.",
+                              "type": "svelte-component",
+                              "props": {},
+                              "exports": {
+                                "showToast": {
+                                  "description": "Enqueues a toast notification that auto-dismisses after duration ms.",
+                                  "params": [
+                                    {
+                                      "name": "message",
+                                      "types": [
+                                        "string"
+                                      ],
+                                      "description": "Text shown in the toast body."
+                                    },
+                                    {
+                                      "name": "type",
+                                      "types": [
+                                        "string"
+                                      ],
+                                      "optional": true,
+                                      "default": "info",
+                                      "description": "Visual variant: 'info' | 'success' | 'error'."
+                                    },
+                                    {
+                                      "name": "duration",
+                                      "types": [
+                                        "number"
+                                      ],
+                                      "optional": true,
+                                      "default": 3000,
+                                      "description": "Display time in milliseconds before auto-close."
+                                    }
+                                  ],
+                                  "returns": {
+                                    "types": [
+                                      "null"
+                                    ],
+                                    "description": "No return value."
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Toggle",
+                        "children": [
+                          {
+                            "file": "Toggle.svelte",
+                            "title": "Toggle",
+                            "description": "Minimal Figma-style on/off switch. Control-only: does not wrap itself in a <label>; parent layouts supply the caption.",
+                            "type": "svelte-component",
+                            "schema": {
+                              "title": "Toggle",
+                              "file": "Toggle.svelte",
+                              "description": "Minimal Figma-style on/off switch. Control-only: does not wrap itself in a <label>; parent layouts supply the caption.",
+                              "type": "svelte-component",
+                              "props": {
+                                "checked": {
+                                  "types": [
+                                    "boolean"
+                                  ],
+                                  "bindable": true,
+                                  "default": false,
+                                  "description": "On/off state (two-way bindable)."
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "utils",
+                    "children": [
+                      {
+                        "name": "clickOutside",
+                        "children": [
+                          {
+                            "file": "clickOutside.js",
+                            "title": "clickOutside",
+                            "description": "Svelte 5 attachment factory for outside-click detection.",
+                            "type": "function",
+                            "schema": {
+                              "title": "clickOutside",
+                              "file": "clickOutside.js",
+                              "description": "Svelte 5 attachment factory for outside-click detection.",
+                              "type": "function"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "name": "figmaBridge",
+                        "children": [
+                          {
+                            "file": "figmaBridge.js",
+                            "title": "figmaBridge",
+                            "description": "UI-side RPC bridge to the Figma plugin sandbox: send, events, client/session/document storage proxies.",
+                            "type": "object",
+                            "schema": {
+                              "title": "figmaBridge",
+                              "file": "figmaBridge.js",
+                              "description": "UI-side RPC bridge to the Figma plugin sandbox: send, events, client/session/document storage proxies.",
+                              "type": "object"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "name": "initAutoResize",
+                        "children": [
+                          {
+                            "file": "initAutoResize.js",
+                            "title": "initAutoResize",
+                            "description": "ResizeObserver → figmaBridge.send('resize') to keep plugin window sized to content.",
+                            "type": "function",
+                            "schema": {
+                              "title": "initAutoResize",
+                              "file": "initAutoResize.js",
+                              "description": "ResizeObserver → figmaBridge.send('resize') to keep plugin window sized to content.",
+                              "type": "function"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "utils",
+            "children": [
+              {
+                "name": "src",
+                "children": [
+                  {
+                    "name": "escapeHtml",
+                    "children": [
+                      {
+                        "file": "escapeHtml.js",
+                        "title": "escapeHtml",
+                        "description": "Escapes &, <, >, and \" so a string can be safely inserted into HTML markup.",
+                        "type": "function",
+                        "schema": {
+                          "title": "escapeHtml",
+                          "file": "escapeHtml.js",
+                          "description": "Escapes &, <, >, and \" so a string can be safely inserted into HTML markup.",
+                          "type": "function",
+                          "params": [
+                            {
+                              "name": "str",
+                              "types": [
+                                "string"
+                              ],
+                              "description": "Untrusted text to escape."
+                            }
+                          ],
+                          "returns": {
+                            "types": [
+                              "string"
+                            ],
+                            "description": "HTML-safe string."
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "name": "formatNumber",
+                    "children": [
+                      {
+                        "file": "formatNumber.js",
+                        "title": "formatNumber",
+                        "description": "Formats a numeric value with fixed decimal precision and strips trailing zeros. Accepts the sentinel string 'mixed' for multi-selection UI.",
+                        "type": "function",
+                        "schema": {
+                          "title": "formatNumber",
+                          "file": "formatNumber.js",
+                          "description": "Formats a numeric value with fixed decimal precision and strips trailing zeros. Accepts the sentinel string 'mixed' for multi-selection UI.",
+                          "type": "function",
+                          "params": [
+                            {
+                              "name": "num",
+                              "types": [
+                                "number",
+                                "string",
+                                "null"
+                              ],
+                              "description": "Value to format. Pass 'mixed' or 'Mixed' to return the Mixed label; null/NaN yields an empty string."
+                            },
+                            {
+                              "name": "precision",
+                              "types": [
+                                "number"
+                              ],
+                              "optional": true,
+                              "default": 2,
+                              "description": "Number of decimal places used by toFixed before trailing zeros are removed."
+                            }
+                          ],
+                          "returns": {
+                            "types": [
+                              "string"
+                            ],
+                            "description": "Formatted number string, 'Mixed', or empty string."
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "name": "mergeSelectionOrder",
+                    "children": [
+                      {
+                        "file": "mergeSelectionOrder.js",
+                        "title": "mergeSelectionOrder",
+                        "description": "Merges a previous ordered id list with a fresh selection: keeps prior order for still-selected nodes and appends newly selected ones.",
+                        "type": "function",
+                        "schema": {
+                          "title": "mergeSelectionOrder",
+                          "file": "mergeSelectionOrder.js",
+                          "description": "Merges a previous ordered id list with a fresh selection: keeps prior order for still-selected nodes and appends newly selected ones.",
+                          "type": "function",
+                          "params": [
+                            {
+                              "name": "prevIds",
+                              "types": [
+                                "array"
+                              ],
+                              "description": "Previously ordered node ids (from drag-and-drop list)."
+                            },
+                            {
+                              "name": "incoming",
+                              "types": [
+                                "array"
+                              ],
+                              "description": "Current selection items, each with at least an `id` field."
+                            }
+                          ],
+                          "returns": {
+                            "types": [
+                              "array"
+                            ],
+                            "description": "Ordered array of selection item objects."
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "name": "moveItem",
+                    "children": [
+                      {
+                        "file": "moveItem.js",
+                        "title": "moveItem",
+                        "description": "Returns a new array with the element at index `from` moved to index `to`. Does not mutate the original array.",
+                        "type": "function",
+                        "schema": {
+                          "title": "moveItem",
+                          "file": "moveItem.js",
+                          "description": "Returns a new array with the element at index `from` moved to index `to`. Does not mutate the original array.",
+                          "type": "function",
+                          "params": [
+                            {
+                              "name": "arr",
+                              "types": [
+                                "array"
+                              ],
+                              "description": "Source array (left unchanged)."
+                            },
+                            {
+                              "name": "from",
+                              "types": [
+                                "number"
+                              ],
+                              "description": "Index of the item to move."
+                            },
+                            {
+                              "name": "to",
+                              "types": [
+                                "number"
+                              ],
+                              "description": "Destination index."
+                            }
+                          ],
+                          "returns": {
+                            "types": [
+                              "array"
+                            ],
+                            "description": "New array with the item reordered, or a shallow copy if indices are invalid."
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "name": "parseInput",
+                    "children": [
+                      {
+                        "file": "parseInput.js",
+                        "title": "parseInput",
+                        "description": "Parses a free-text UI field into a number, the 'mixed' sentinel, or null when the value is empty/invalid.",
+                        "type": "function",
+                        "schema": {
+                          "title": "parseInput",
+                          "file": "parseInput.js",
+                          "description": "Parses a free-text UI field into a number, the 'mixed' sentinel, or null when the value is empty/invalid.",
+                          "type": "function",
+                          "params": [
+                            {
+                              "name": "val",
+                              "types": [
+                                "string",
+                                "null"
+                              ],
+                              "description": "Raw input string from a form field."
+                            },
+                            {
+                              "name": "allowNegative",
+                              "types": [
+                                "boolean"
+                              ],
+                              "optional": true,
+                              "default": false,
+                              "description": "When false, negative numbers are clamped to 0."
+                            }
+                          ],
+                          "returns": {
+                            "types": [
+                              "number",
+                              "string",
+                              "null"
+                            ],
+                            "description": "Parsed number, 'mixed', or null."
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "name": "pxToUnit",
+                    "children": [
+                      {
+                        "file": "pxToUnit.js",
+                        "title": "pxToUnit",
+                        "description": "Converts a pixel length to a physical unit at the given print resolution (PPI).",
+                        "type": "function",
+                        "schema": {
+                          "title": "pxToUnit",
+                          "file": "pxToUnit.js",
+                          "description": "Converts a pixel length to a physical unit at the given print resolution (PPI).",
+                          "type": "function",
+                          "params": [
+                            {
+                              "name": "px",
+                              "types": [
+                                "number"
+                              ],
+                              "description": "Length in CSS/Figma pixels."
+                            },
+                            {
+                              "name": "ppi",
+                              "types": [
+                                "number"
+                              ],
+                              "description": "Pixels per inch used for the conversion."
+                            },
+                            {
+                              "name": "unit",
+                              "types": [
+                                "string"
+                              ],
+                              "description": "Target physical unit: 'mm', 'cm', or 'in'."
+                            }
+                          ],
+                          "returns": {
+                            "types": [
+                              "number"
+                            ],
+                            "description": "Length in the requested physical unit."
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "name": "safeFilename",
+                    "children": [
+                      {
+                        "file": "safeFilename.js",
+                        "title": "safeFilename",
+                        "description": "Sanitizes a string for use as a download filename by replacing forbidden path characters.",
+                        "type": "function",
+                        "schema": {
+                          "title": "safeFilename",
+                          "file": "safeFilename.js",
+                          "description": "Sanitizes a string for use as a download filename by replacing forbidden path characters.",
+                          "type": "function",
+                          "params": [
+                            {
+                              "name": "name",
+                              "types": [
+                                "string"
+                              ],
+                              "optional": true,
+                              "description": "Proposed filename (without path)."
+                            },
+                            {
+                              "name": "fallback",
+                              "types": [
+                                "string"
+                              ],
+                              "optional": true,
+                              "default": "export",
+                              "description": "Value used when name is empty after sanitization."
+                            }
+                          ],
+                          "returns": {
+                            "types": [
+                              "string"
+                            ],
+                            "description": "Safe filename segment."
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "name": "unitMultiplier",
+                    "children": [
+                      {
+                        "file": "unitMultiplier.js",
+                        "title": "unitMultiplier",
+                        "description": "Returns how many physical units fit in one inch. Used for PPI ↔ mm/cm/in conversions.",
+                        "type": "function",
+                        "schema": {
+                          "title": "unitMultiplier",
+                          "file": "unitMultiplier.js",
+                          "description": "Returns how many physical units fit in one inch. Used for PPI ↔ mm/cm/in conversions.",
+                          "type": "function",
+                          "params": [
+                            {
+                              "name": "unit",
+                              "types": [
+                                "string"
+                              ],
+                              "description": "Physical unit code: 'mm' (default), 'cm', or 'in'."
+                            }
+                          ],
+                          "returns": {
+                            "types": [
+                              "number"
+                            ],
+                            "description": "Multiplier relative to inches (25.4 for mm, 2.54 for cm, 1 for in)."
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "name": "unitToPx",
+                    "children": [
+                      {
+                        "file": "unitToPx.js",
+                        "title": "unitToPx",
+                        "description": "Converts a physical length (mm/cm/in) to pixels at the given print resolution (PPI).",
+                        "type": "function",
+                        "schema": {
+                          "title": "unitToPx",
+                          "file": "unitToPx.js",
+                          "description": "Converts a physical length (mm/cm/in) to pixels at the given print resolution (PPI).",
+                          "type": "function",
+                          "params": [
+                            {
+                              "name": "value",
+                              "types": [
+                                "number"
+                              ],
+                              "description": "Length in the physical unit."
+                            },
+                            {
+                              "name": "ppi",
+                              "types": [
+                                "number"
+                              ],
+                              "description": "Pixels per inch used for the conversion."
+                            },
+                            {
+                              "name": "unit",
+                              "types": [
+                                "string"
+                              ],
+                              "description": "Source physical unit: 'mm', 'cm', or 'in'."
+                            }
+                          ],
+                          "returns": {
+                            "types": [
+                              "number"
+                            ],
+                            "description": "Length in pixels."
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

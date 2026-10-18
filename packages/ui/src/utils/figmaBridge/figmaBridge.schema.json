@@ -1,0 +1,6 @@
+{
+  "title": "figmaBridge",
+  "file": "figmaBridge.js",
+  "description": "UI-side RPC bridge to the Figma plugin sandbox: send, events, client/session/document storage proxies.",
+  "type": "object"
+}

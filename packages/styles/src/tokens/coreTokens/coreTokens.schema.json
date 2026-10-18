@@ -1,0 +1,62 @@
+{
+  "title": "coreTokens",
+  "file": "coreTokens.css",
+  "description": "Legacy/compat design tokens for the Size PDF panel (colors, field width, icon size). Prefer figmaTokens for new work; both layers share the same CSS variable names where overlapping.",
+  "type": "css-module",
+  "variables": {
+    "--bg-main": {
+      "description": "Main panel background."
+    },
+    "--bg-field": {
+      "description": "Input field background."
+    },
+    "--bg-field-hover": {
+      "description": "Input field hover background."
+    },
+    "--color-text": {
+      "description": "Primary text color."
+    },
+    "--color-muted": {
+      "description": "Muted label/icon color."
+    },
+    "--color-primary": {
+      "description": "Accent/primary action color."
+    },
+    "--color-primary-light": {
+      "description": "Light accent fill for active icon buttons."
+    },
+    "--border-focus": {
+      "description": "Focus ring border color."
+    },
+    "--border-color": {
+      "description": "Default control border."
+    },
+    "--radius-ui": {
+      "description": "Control corner radius."
+    },
+    "--font-main": {
+      "description": "UI font family."
+    },
+    "--width-field": {
+      "description": "Standard field column width."
+    },
+    "--row-gap": {
+      "description": "Grid column gap."
+    },
+    "--size-icon": {
+      "description": "Icon button size."
+    },
+    "--space-xs": {
+      "description": "3px spacing step."
+    },
+    "--space-sm": {
+      "description": "6px spacing step."
+    },
+    "--space-md": {
+      "description": "8px spacing step."
+    },
+    "--space-lg": {
+      "description": "10px spacing step."
+    }
+  }
+}

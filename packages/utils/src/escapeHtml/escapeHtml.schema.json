@@ -1,0 +1,21 @@
+{
+  "title": "escapeHtml",
+  "file": "escapeHtml.js",
+  "description": "Escapes &, <, >, and \" so a string can be safely inserted into HTML markup.",
+  "type": "function",
+  "params": [
+    {
+      "name": "str",
+      "types": [
+        "string"
+      ],
+      "description": "Untrusted text to escape."
+    }
+  ],
+  "returns": {
+    "types": [
+      "string"
+    ],
+    "description": "HTML-safe string."
+  }
+}

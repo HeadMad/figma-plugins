@@ -1,0 +1,29 @@
+{
+  "title": "PrimaryButton",
+  "file": "PrimaryButton.svelte",
+  "description": "Full-width primary action button (brand blue) used for confirm/export actions inside popovers.",
+  "type": "svelte-component",
+  "props": {
+    "disabled": {
+      "types": [
+        "boolean"
+      ],
+      "default": false,
+      "description": "Disables the button and reduces opacity."
+    },
+    "onclick": {
+      "types": [
+        "function"
+      ],
+      "optional": true,
+      "description": "Click handler (e: MouseEvent) => void."
+    },
+    "children": {
+      "types": [
+        "snippet"
+      ],
+      "optional": true,
+      "description": "Button label content."
+    }
+  }
+}

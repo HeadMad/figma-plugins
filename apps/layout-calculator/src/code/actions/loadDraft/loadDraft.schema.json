@@ -1,0 +1,13 @@
+{
+  "title": "loadDraft",
+  "file": "loadDraft.js",
+  "description": "Load calculator draft and custom presets from clientStorage.",
+  "type": "function",
+  "params": [],
+  "returns": {
+    "types": [
+      "Promise"
+    ],
+    "description": "{ ok, data, presets }"
+  }
+}

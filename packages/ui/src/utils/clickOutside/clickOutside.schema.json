@@ -1,0 +1,6 @@
+{
+  "title": "clickOutside",
+  "file": "clickOutside.js",
+  "description": "Svelte 5 attachment factory for outside-click detection.",
+  "type": "function"
+}

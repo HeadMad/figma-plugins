@@ -1,0 +1,21 @@
+{
+  "title": "savePreset",
+  "file": "savePreset.js",
+  "description": "Store a named layout preset in clientStorage.",
+  "type": "function",
+  "params": [
+    {
+      "name": "params",
+      "types": [
+        "object"
+      ],
+      "description": "{ name, stateData }"
+    }
+  ],
+  "returns": {
+    "types": [
+      "Promise"
+    ],
+    "description": "{ ok, presets }"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "title": "textMuted",
+  "file": "textMuted.css",
+  "description": "Utility class for secondary/helper copy (smaller size, tertiary text color).",
+  "type": "css-module",
+  "selectors": {
+    ".text-muted": {
+      "description": "Muted body text for descriptions and empty states."
+    }
+  }
+}

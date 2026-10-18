@@ -1,0 +1,35 @@
+{
+  "title": "unitToPx",
+  "file": "unitToPx.js",
+  "description": "Converts a physical length (mm/cm/in) to pixels at the given print resolution (PPI).",
+  "type": "function",
+  "params": [
+    {
+      "name": "value",
+      "types": [
+        "number"
+      ],
+      "description": "Length in the physical unit."
+    },
+    {
+      "name": "ppi",
+      "types": [
+        "number"
+      ],
+      "description": "Pixels per inch used for the conversion."
+    },
+    {
+      "name": "unit",
+      "types": [
+        "string"
+      ],
+      "description": "Source physical unit: 'mm', 'cm', or 'in'."
+    }
+  ],
+  "returns": {
+    "types": [
+      "number"
+    ],
+    "description": "Length in pixels."
+  }
+}

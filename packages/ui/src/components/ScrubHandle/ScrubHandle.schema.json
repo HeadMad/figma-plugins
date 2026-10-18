@@ -1,0 +1,51 @@
+{
+  "title": "ScrubHandle",
+  "file": "ScrubHandle.svelte",
+  "description": "Horizontal drag handle for scrubbing a numeric value. Typically placed inside a field prefix (W, H, R). Emits onscrub while the pointer moves.",
+  "type": "svelte-component",
+  "props": {
+    "value": {
+      "types": [
+        "number",
+        "string"
+      ],
+      "default": 0,
+      "description": "Current numeric value used as the scrub starting point."
+    },
+    "step": {
+      "types": [
+        "number"
+      ],
+      "default": 1,
+      "description": "Multiplier applied to horizontal pixel delta (pixels × step)."
+    },
+    "min": {
+      "types": [
+        "number"
+      ],
+      "optional": true,
+      "description": "Lower clamp for the scrubbed value."
+    },
+    "disabled": {
+      "types": [
+        "boolean"
+      ],
+      "default": false,
+      "description": "When true, pointer interactions are ignored."
+    },
+    "onscrub": {
+      "types": [
+        "function"
+      ],
+      "optional": true,
+      "description": "Callback (next: number) => void invoked on each pointer move during a drag."
+    },
+    "children": {
+      "types": [
+        "snippet"
+      ],
+      "optional": true,
+      "description": "Snippet rendered inside the handle (usually a short prefix label)."
+    }
+  }
+}

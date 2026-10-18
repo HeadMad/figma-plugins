@@ -1,0 +1,29 @@
+{
+  "title": "orderedSelection",
+  "file": "orderedSelection.js",
+  "description": "Filters the current selection to exportable nodes and optionally reorders them by a list of node ids (for multi-page PDF order).",
+  "type": "function",
+  "params": [
+    {
+      "name": "selection",
+      "types": [
+        "array"
+      ],
+      "description": "Readonly array of SceneNode from figma.currentPage.selection."
+    },
+    {
+      "name": "orderIds",
+      "types": [
+        "array"
+      ],
+      "optional": true,
+      "description": "Preferred order of node ids. When empty or missing, selection order is kept."
+    }
+  ],
+  "returns": {
+    "types": [
+      "array"
+    ],
+    "description": "Ordered array of exportable SceneNodes."
+  }
+}

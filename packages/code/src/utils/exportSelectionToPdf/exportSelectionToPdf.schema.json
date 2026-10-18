@@ -1,0 +1,28 @@
+{
+  "title": "exportSelectionToPdf",
+  "file": "exportSelectionToPdf.js",
+  "description": "Exports the ordered selection to PDF or flattened JPG page payloads and posts progress/result messages to the UI via the provided post callback.",
+  "type": "function",
+  "params": [
+    {
+      "name": "msg",
+      "types": [
+        "object"
+      ],
+      "description": "Export options: mode ('vector'|'flatten'), merge (boolean), order (string[] of node ids)."
+    },
+    {
+      "name": "post",
+      "types": [
+        "function"
+      ],
+      "description": "Callback used to send progress and result messages to the UI (e.g. sendToUi or figma.ui.postMessage wrapper)."
+    }
+  ],
+  "returns": {
+    "types": [
+      "Promise"
+    ],
+    "description": "Resolves when all pages are exported and the final message is posted. Does not return page data directly."
+  }
+}

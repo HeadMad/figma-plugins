@@ -1,0 +1,24 @@
+{
+  "name": "@layout-calculator",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "barrel": "node ../../scripts/barrel.js src/code/actions",
+    "build": "node ../../scripts/build-plugin.js",
+    "dev": "node ../../scripts/build-plugin.js --watch",
+    "schemas": "node ../../scripts/schema-tree.js . --md"
+  },
+  "dependencies": {
+    "@code": "*",
+    "@ui": "*",
+    "@utils": "*",
+    "@styles": "*",
+    "svelte": "^5.0.0"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^5.0.0",
+    "vite": "^6.0.0",
+    "vite-plugin-singlefile": "^2.0.0"
+  }
+}

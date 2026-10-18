@@ -1,0 +1,11 @@
+{
+  "name": "Print PDF",
+  "id": "print-pdf-export",
+  "api": "1.0.0",
+  "main": "dist/code.js",
+  "ui": "dist/ui.html",
+  "editorType": ["figma"],
+  "networkAccess": {
+    "allowedDomains": ["none"]
+  }
+}

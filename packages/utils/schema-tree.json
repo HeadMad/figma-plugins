@@ -1,0 +1,416 @@
+{
+  "generatedAt": "2026-10-18T04:13:35.657Z",
+  "root": "packages/utils",
+  "scan": "packages/utils",
+  "include": [
+    "*"
+  ],
+  "exclude": [
+    "schema-tree.json"
+  ],
+  "count": 29,
+  "tree": {
+    "name": "utils",
+    "children": [
+      {
+        "file": "package.json"
+      },
+      {
+        "name": "src",
+        "children": [
+          {
+            "name": "escapeHtml",
+            "children": [
+              {
+                "file": "escapeHtml.js",
+                "title": "escapeHtml",
+                "description": "Escapes &, <, >, and \" so a string can be safely inserted into HTML markup.",
+                "type": "function",
+                "schema": {
+                  "title": "escapeHtml",
+                  "description": "Escapes &, <, >, and \" so a string can be safely inserted into HTML markup.",
+                  "type": "function",
+                  "params": [
+                    {
+                      "name": "str",
+                      "types": [
+                        "string"
+                      ],
+                      "description": "Untrusted text to escape."
+                    }
+                  ],
+                  "returns": {
+                    "types": [
+                      "string"
+                    ],
+                    "description": "HTML-safe string."
+                  }
+                }
+              },
+              {
+                "file": "index.js"
+              }
+            ]
+          },
+          {
+            "name": "formatNumber",
+            "children": [
+              {
+                "file": "formatNumber.js",
+                "title": "formatNumber",
+                "description": "Formats a numeric value with fixed decimal precision and strips trailing zeros. Accepts the sentinel string 'mixed' for multi-selection UI.",
+                "type": "function",
+                "schema": {
+                  "title": "formatNumber",
+                  "description": "Formats a numeric value with fixed decimal precision and strips trailing zeros. Accepts the sentinel string 'mixed' for multi-selection UI.",
+                  "type": "function",
+                  "params": [
+                    {
+                      "name": "num",
+                      "types": [
+                        "number",
+                        "string",
+                        "null"
+                      ],
+                      "description": "Value to format. Pass 'mixed' or 'Mixed' to return the Mixed label; null/NaN yields an empty string."
+                    },
+                    {
+                      "name": "precision",
+                      "types": [
+                        "number"
+                      ],
+                      "optional": true,
+                      "default": 2,
+                      "description": "Number of decimal places used by toFixed before trailing zeros are removed."
+                    }
+                  ],
+                  "returns": {
+                    "types": [
+                      "string"
+                    ],
+                    "description": "Formatted number string, 'Mixed', or empty string."
+                  }
+                }
+              },
+              {
+                "file": "index.js"
+              }
+            ]
+          },
+          {
+            "file": "index.js"
+          },
+          {
+            "name": "mergeSelectionOrder",
+            "children": [
+              {
+                "file": "index.js"
+              },
+              {
+                "file": "mergeSelectionOrder.js",
+                "title": "mergeSelectionOrder",
+                "description": "Merges a previous ordered id list with a fresh selection: keeps prior order for still-selected nodes and appends newly selected ones.",
+                "type": "function",
+                "schema": {
+                  "title": "mergeSelectionOrder",
+                  "description": "Merges a previous ordered id list with a fresh selection: keeps prior order for still-selected nodes and appends newly selected ones.",
+                  "type": "function",
+                  "params": [
+                    {
+                      "name": "prevIds",
+                      "types": [
+                        "array"
+                      ],
+                      "description": "Previously ordered node ids (from drag-and-drop list)."
+                    },
+                    {
+                      "name": "incoming",
+                      "types": [
+                        "array"
+                      ],
+                      "description": "Current selection items, each with at least an `id` field."
+                    }
+                  ],
+                  "returns": {
+                    "types": [
+                      "array"
+                    ],
+                    "description": "Ordered array of selection item objects."
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "moveItem",
+            "children": [
+              {
+                "file": "index.js"
+              },
+              {
+                "file": "moveItem.js",
+                "title": "moveItem",
+                "description": "Returns a new array with the element at index `from` moved to index `to`. Does not mutate the original array.",
+                "type": "function",
+                "schema": {
+                  "title": "moveItem",
+                  "description": "Returns a new array with the element at index `from` moved to index `to`. Does not mutate the original array.",
+                  "type": "function",
+                  "params": [
+                    {
+                      "name": "arr",
+                      "types": [
+                        "array"
+                      ],
+                      "description": "Source array (left unchanged)."
+                    },
+                    {
+                      "name": "from",
+                      "types": [
+                        "number"
+                      ],
+                      "description": "Index of the item to move."
+                    },
+                    {
+                      "name": "to",
+                      "types": [
+                        "number"
+                      ],
+                      "description": "Destination index."
+                    }
+                  ],
+                  "returns": {
+                    "types": [
+                      "array"
+                    ],
+                    "description": "New array with the item reordered, or a shallow copy if indices are invalid."
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "parseInput",
+            "children": [
+              {
+                "file": "index.js"
+              },
+              {
+                "file": "parseInput.js",
+                "title": "parseInput",
+                "description": "Parses a free-text UI field into a number, the 'mixed' sentinel, or null when the value is empty/invalid.",
+                "type": "function",
+                "schema": {
+                  "title": "parseInput",
+                  "description": "Parses a free-text UI field into a number, the 'mixed' sentinel, or null when the value is empty/invalid.",
+                  "type": "function",
+                  "params": [
+                    {
+                      "name": "val",
+                      "types": [
+                        "string",
+                        "null"
+                      ],
+                      "description": "Raw input string from a form field."
+                    },
+                    {
+                      "name": "allowNegative",
+                      "types": [
+                        "boolean"
+                      ],
+                      "optional": true,
+                      "default": false,
+                      "description": "When false, negative numbers are clamped to 0."
+                    }
+                  ],
+                  "returns": {
+                    "types": [
+                      "number",
+                      "string",
+                      "null"
+                    ],
+                    "description": "Parsed number, 'mixed', or null."
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "pxToUnit",
+            "children": [
+              {
+                "file": "index.js"
+              },
+              {
+                "file": "pxToUnit.js",
+                "title": "pxToUnit",
+                "description": "Converts a pixel length to a physical unit at the given print resolution (PPI).",
+                "type": "function",
+                "schema": {
+                  "title": "pxToUnit",
+                  "description": "Converts a pixel length to a physical unit at the given print resolution (PPI).",
+                  "type": "function",
+                  "params": [
+                    {
+                      "name": "px",
+                      "types": [
+                        "number"
+                      ],
+                      "description": "Length in CSS/Figma pixels."
+                    },
+                    {
+                      "name": "ppi",
+                      "types": [
+                        "number"
+                      ],
+                      "description": "Pixels per inch used for the conversion."
+                    },
+                    {
+                      "name": "unit",
+                      "types": [
+                        "string"
+                      ],
+                      "description": "Target physical unit: 'mm', 'cm', or 'in'."
+                    }
+                  ],
+                  "returns": {
+                    "types": [
+                      "number"
+                    ],
+                    "description": "Length in the requested physical unit."
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "safeFilename",
+            "children": [
+              {
+                "file": "index.js"
+              },
+              {
+                "file": "safeFilename.js",
+                "title": "safeFilename",
+                "description": "Sanitizes a string for use as a download filename by replacing forbidden path characters.",
+                "type": "function",
+                "schema": {
+                  "title": "safeFilename",
+                  "description": "Sanitizes a string for use as a download filename by replacing forbidden path characters.",
+                  "type": "function",
+                  "params": [
+                    {
+                      "name": "name",
+                      "types": [
+                        "string"
+                      ],
+                      "optional": true,
+                      "description": "Proposed filename (without path)."
+                    },
+                    {
+                      "name": "fallback",
+                      "types": [
+                        "string"
+                      ],
+                      "optional": true,
+                      "default": "export",
+                      "description": "Value used when name is empty after sanitization."
+                    }
+                  ],
+                  "returns": {
+                    "types": [
+                      "string"
+                    ],
+                    "description": "Safe filename segment."
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "unitMultiplier",
+            "children": [
+              {
+                "file": "index.js"
+              },
+              {
+                "file": "unitMultiplier.js",
+                "title": "unitMultiplier",
+                "description": "Returns how many physical units fit in one inch. Used for PPI ↔ mm/cm/in conversions.",
+                "type": "function",
+                "schema": {
+                  "title": "unitMultiplier",
+                  "description": "Returns how many physical units fit in one inch. Used for PPI ↔ mm/cm/in conversions.",
+                  "type": "function",
+                  "params": [
+                    {
+                      "name": "unit",
+                      "types": [
+                        "string"
+                      ],
+                      "description": "Physical unit code: 'mm' (default), 'cm', or 'in'."
+                    }
+                  ],
+                  "returns": {
+                    "types": [
+                      "number"
+                    ],
+                    "description": "Multiplier relative to inches (25.4 for mm, 2.54 for cm, 1 for in)."
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "unitToPx",
+            "children": [
+              {
+                "file": "index.js"
+              },
+              {
+                "file": "unitToPx.js",
+                "title": "unitToPx",
+                "description": "Converts a physical length (mm/cm/in) to pixels at the given print resolution (PPI).",
+                "type": "function",
+                "schema": {
+                  "title": "unitToPx",
+                  "description": "Converts a physical length (mm/cm/in) to pixels at the given print resolution (PPI).",
+                  "type": "function",
+                  "params": [
+                    {
+                      "name": "value",
+                      "types": [
+                        "number"
+                      ],
+                      "description": "Length in the physical unit."
+                    },
+                    {
+                      "name": "ppi",
+                      "types": [
+                        "number"
+                      ],
+                      "description": "Pixels per inch used for the conversion."
+                    },
+                    {
+                      "name": "unit",
+                      "types": [
+                        "string"
+                      ],
+                      "description": "Source physical unit: 'mm', 'cm', or 'in'."
+                    }
+                  ],
+                  "returns": {
+                    "types": [
+                      "number"
+                    ],
+                    "description": "Length in pixels."
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

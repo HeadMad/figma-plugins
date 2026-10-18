@@ -1,0 +1,73 @@
+{
+  "title": "FieldInput",
+  "file": "FieldInput.svelte",
+  "description": "Text field with optional scrubbable prefix, matching Figma property panel inputs. Supports $bindable value and oninput/onscrub callbacks.",
+  "type": "svelte-component",
+  "props": {
+    "value": {
+      "types": [
+        "string"
+      ],
+      "bindable": true,
+      "default": "",
+      "description": "Current field text (two-way bindable)."
+    },
+    "placeholder": {
+      "types": [
+        "string"
+      ],
+      "optional": true,
+      "description": "Native input placeholder."
+    },
+    "prefix": {
+      "types": [
+        "string"
+      ],
+      "optional": true,
+      "description": "Label shown in the left prefix area (e.g. W, H, R, PPI)."
+    },
+    "step": {
+      "types": [
+        "number"
+      ],
+      "default": 1,
+      "description": "Scrub step passed to ScrubHandle."
+    },
+    "min": {
+      "types": [
+        "number"
+      ],
+      "default": 0,
+      "description": "Minimum value for scrubbing."
+    },
+    "scrub": {
+      "types": [
+        "boolean"
+      ],
+      "default": true,
+      "description": "When true and prefix is set, the prefix acts as a ScrubHandle."
+    },
+    "padLeft": {
+      "types": [
+        "string",
+        "null"
+      ],
+      "optional": true,
+      "description": "Override for input padding-left (e.g. '28px' for longer prefixes)."
+    },
+    "oninput": {
+      "types": [
+        "function"
+      ],
+      "optional": true,
+      "description": "Callback (val: string) => void after the value changes via typing or scrubbing."
+    },
+    "onscrub": {
+      "types": [
+        "function"
+      ],
+      "optional": true,
+      "description": "Callback (val: number) => void when the value changes via scrub only."
+    }
+  }
+}

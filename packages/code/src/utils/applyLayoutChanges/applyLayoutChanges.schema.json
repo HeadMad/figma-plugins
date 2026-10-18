@@ -1,0 +1,21 @@
+{
+  "title": "applyLayoutChanges",
+  "file": "applyLayoutChanges.js",
+  "description": "Applies width, height, stroke weight, and corner radius changes from a UI message to every node in the current Figma selection.",
+  "type": "function",
+  "params": [
+    {
+      "name": "msg",
+      "types": [
+        "object"
+      ],
+      "description": "Layout payload: width, height, radius, radiusIndividual {tl,tr,br,bl}, strokeWeight, constrainProportions, isMainRadiusChanged. Values may be numbers or 'mixed'."
+    }
+  ],
+  "returns": {
+    "types": [
+      "null"
+    ],
+    "description": "No return value; mutates selected nodes in place."
+  }
+}

@@ -1,0 +1,30 @@
+@layer reset {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: var(--figma-color-bg-primary);
+    color: var(--figma-color-text);
+    font-family: var(--font-stack);
+    font-size: var(--font-size-default);
+    user-select: none;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  button,
+  input,
+  select {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+  }
+}

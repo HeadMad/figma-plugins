@@ -1,0 +1,21 @@
+{
+  "title": "printExport",
+  "file": "printExport.js",
+  "description": "Export selection to PDF or flattened JPG with optional font-to-outlines via temporary clones.",
+  "type": "function",
+  "params": [
+    {
+      "name": "msg",
+      "types": [
+        "object"
+      ],
+      "description": "{ mode: 'flatten'|'vector', merge, outline, order: string[] }"
+    }
+  ],
+  "returns": {
+    "types": [
+      "Promise"
+    ],
+    "description": "{ ok, pages, merge, pageName } or { ok: false, error }"
+  }
+}

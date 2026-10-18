@@ -1,0 +1,46 @@
+{
+  "title": "exportPdf",
+  "file": "exportPdf.js",
+  "description": "Backend RPC action: exports the ordered selection as vector PDF or flattened JPG pages. Streams pdf-progress events to the UI and returns page payloads for client-side PDF assembly (pdf-lib).",
+  "type": "function",
+  "params": [
+    {
+      "name": "msg",
+      "types": [
+        "object"
+      ],
+      "description": "Export options.",
+      "properties": {
+        "mode": {
+          "types": [
+            "string"
+          ],
+          "optional": true,
+          "default": "vector",
+          "description": "'vector' exports PDF bytes; 'flatten' exports JPG at scale 1."
+        },
+        "merge": {
+          "types": [
+            "boolean"
+          ],
+          "optional": true,
+          "default": true,
+          "description": "Hint for the UI: true = single multi-page PDF, false = one file per frame."
+        },
+        "order": {
+          "types": [
+            "array"
+          ],
+          "optional": true,
+          "description": "Node ids in the desired page order (from the drag-and-drop SelectionList)."
+        }
+      }
+    }
+  ],
+  "returns": {
+    "types": [
+      "Promise"
+    ],
+    "description": "Resolves to { ok: true, pages[{name,bytes,isImage,format,width,height}], merge, pageName } or { ok: false, error }."
+  }
+}

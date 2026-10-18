@@ -1,0 +1,13 @@
+{
+  "title": "cycleCard",
+  "file": "cycleCard.js",
+  "description": "Rotate the image stack: top card moves to the bottom.",
+  "type": "function",
+  "params": [],
+  "returns": {
+    "types": [
+      "Promise"
+    ],
+    "description": "{ ok: true }"
+  }
+}

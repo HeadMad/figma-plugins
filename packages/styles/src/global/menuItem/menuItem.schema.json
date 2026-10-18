@@ -1,0 +1,14 @@
+{
+  "title": "menuItem",
+  "file": "menuItem.css",
+  "description": "Styles for popover/dropdown menu rows and separators used inside IconButton popovers. Registered under @layer global.",
+  "type": "css-module",
+  "selectors": {
+    ".menu-item": {
+      "description": "Full-width clickable menu row with hover background."
+    },
+    ".menu-divider": {
+      "description": "1px horizontal rule between menu groups."
+    }
+  }
+}

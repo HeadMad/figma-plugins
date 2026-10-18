@@ -1,0 +1,28 @@
+{
+  "title": "mergeSelectionOrder",
+  "file": "mergeSelectionOrder.js",
+  "description": "Merges a previous ordered id list with a fresh selection: keeps prior order for still-selected nodes and appends newly selected ones.",
+  "type": "function",
+  "params": [
+    {
+      "name": "prevIds",
+      "types": [
+        "array"
+      ],
+      "description": "Previously ordered node ids (from drag-and-drop list)."
+    },
+    {
+      "name": "incoming",
+      "types": [
+        "array"
+      ],
+      "description": "Current selection items, each with at least an `id` field."
+    }
+  ],
+  "returns": {
+    "types": [
+      "array"
+    ],
+    "description": "Ordered array of selection item objects."
+  }
+}

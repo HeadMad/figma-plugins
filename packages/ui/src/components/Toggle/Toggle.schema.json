@@ -1,0 +1,16 @@
+{
+  "title": "Toggle",
+  "file": "Toggle.svelte",
+  "description": "Minimal Figma-style on/off switch. Control-only: does not wrap itself in a <label>; parent layouts supply the caption.",
+  "type": "svelte-component",
+  "props": {
+    "checked": {
+      "types": [
+        "boolean"
+      ],
+      "bindable": true,
+      "default": false,
+      "description": "On/off state (two-way bindable)."
+    }
+  }
+}

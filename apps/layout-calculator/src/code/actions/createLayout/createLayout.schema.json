@@ -1,0 +1,21 @@
+{
+  "title": "createLayout",
+  "file": "createLayout.js",
+  "description": "Build a layout frame with optional card component grid and Figma layout grids from calculator parameters.",
+  "type": "function",
+  "params": [
+    {
+      "name": "params",
+      "types": [
+        "object"
+      ],
+      "description": "{ data: layout fields, names: { frameStr, cardStr } }"
+    }
+  ],
+  "returns": {
+    "types": [
+      "object"
+    ],
+    "description": "{ ok: true }"
+  }
+}
