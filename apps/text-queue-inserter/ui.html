@@ -1,0 +1,191 @@
+<!-- ui.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      font-family: Inter, sans-serif;
+      margin: 8px;
+      padding: 0;
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+    textarea {
+      width: 100%;
+      height: 100px;
+      resize: none;
+      border: 1px solid #e6e6e6;
+      border-radius: 4px;
+      padding: 8px;
+      font-size: 12px;
+      line-height: 16px;
+      color: #333333;
+      box-sizing: border-box;
+      outline: none;
+    }
+    textarea:focus {
+      border-color: #18a0fb;
+    }
+    textarea:disabled {
+      background-color: #f5f5f5;
+      color: #999999;
+      border-color: #e6e6e6;
+    }
+    button {
+      width: 100%;
+      height: 40px;
+      border: none;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      box-sizing: border-box;
+      transition: background-color 0.15s ease, color 0.15s ease;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding: 0 16px;
+      
+      /* Исходное состояние кнопки */
+      background-color: #18a0fb;
+      color: #ffffff;
+    }
+    button:hover {
+      background-color: #0d8de3;
+    }
+    /* Активное состояние очереди (яркий сигнальный цвет) */
+    button.active {
+      background-color: #ff4d4f;
+      color: #ffffff;
+    }
+    button.active:hover {
+      background-color: #ff7875;
+    }
+  </style>
+</head>
+<body>
+
+  <textarea id="textInput" placeholder="Введите фразы через запятую..."></textarea>
+  <button id="actionBtn">Запустить процесс</button>
+
+  <script>
+    const textInput = document.getElementById('textInput');
+    const actionBtn = document.getElementById('actionBtn');
+    
+    let queue = [];
+    let isActive = false;
+
+    // Запрос сохраненного текста при запуске UI
+    window.onload = () => {
+      parent.postMessage({ pluginMessage: { type: 'load-text' } }, '*');
+    };
+
+    // Прием сообщений от Core-процесса (code.js)
+    window.onmessage = (event) => {
+      const msg = event.data.pluginMessage;
+      
+      if (msg.type === 'restore-text') {
+        textInput.value = msg.text || '';
+      }
+      
+      if (msg.type === 'text-inserted-success') {
+        advanceQueue();
+      }
+      
+      if (msg.type === 'force-stop') {
+        stopProcess();
+      }
+    };
+
+    // Автосохранение текста при вводе
+    textInput.addEventListener('input', () => {
+      parent.postMessage({ pluginMessage: { type: 'save-text', text: textInput.value } }, '*');
+    });
+
+    // Обработка клика по управляющей кнопке
+    actionBtn.addEventListener('click', () => {
+      if (!isActive) {
+        startProcess();
+      } else {
+        // Если процесс активен — клик по кнопке пропускает элемент
+        advanceQueue();
+      }
+    });
+
+    // Слушатель клавиши Escape
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && isActive) {
+        stopProcess();
+        // Отправляем сигнал в Figma для сброса выделения/режима
+        parent.postMessage({ pluginMessage: { type: 'stop-active-mode' } }, '*');
+      }
+    });
+
+    // Запуск очереди
+    function startProcess() {
+      const rawText = textInput.value;
+      if (!rawText.trim()) return;
+
+      // Разбиваем строку по запятым, удаляем лишние пробелы по краям и фильтруем пустые элементы
+      queue = rawText.split(',')
+        .map(item => item.trim())
+        .filter(item => item.length > 0);
+
+      if (queue.length === 0) return;
+
+      isActive = true;
+      textInput.disabled = true;
+      actionBtn.classList.add('active');
+      
+      updateButtonText();
+      
+      // Передаем первое слово и активируем режим прослушивания кликов в Figma
+      parent.postMessage({ 
+        pluginMessage: { 
+          type: 'start-active-mode', 
+          currentText: queue[0] 
+        } 
+      }, '*');
+    }
+
+    // Сдвиг очереди вперед (вставка или пропуск)
+    function advanceQueue() {
+      queue.shift(); // Удаляем текущий обработанный элемент
+      
+      if (queue.length > 0) {
+        updateButtonText();
+        // Передаем новое слово в Core-процесс
+        parent.postMessage({ 
+          pluginMessage: { 
+            type: 'update-current-text', 
+            currentText: queue[0] 
+          } 
+        }, '*');
+      } else {
+        // Очередь закончилась
+        stopProcess();
+        parent.postMessage({ pluginMessage: { type: 'stop-active-mode' } }, '*');
+      }
+    }
+
+    // Остановка процесса и возврат интерфейса в исходный вид
+    function stopProcess() {
+      isActive = false;
+      queue = [];
+      textInput.disabled = false;
+      actionBtn.classList.remove('active');
+      actionBtn.innerText = 'Запустить процесс';
+    }
+
+    // Обновление надписи на кнопке
+    function updateButtonText() {
+      actionBtn.innerText = queue[0];
+    }
+  </script>
+</body>
+</html>

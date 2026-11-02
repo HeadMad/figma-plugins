@@ -4,7 +4,7 @@ import * as sharedActions from '@pkg/code/actions';
 // Merge shared actions with any plugin-local unique actions (src/code/actions)
 import * as localActions from './actions/index.js';
 
-const WINDOW_WIDTH = 200;
+const WINDOW_WIDTH = 300;
 const HEIGHT_CONVERTER = 155;
 
 const actions = { ...sharedActions, ...localActions };
